@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="icons/css/all.css" type="text/css">
+    <link rel="stylesheet" href="rapphim.css">
+    <link rel="stylesheet" href="rapphim.js">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-3 logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="col-md-6" class="search">
+                <input type="text" style="width: 400px;margin: 10px 0;"
+                    placeholder=" Tìm tên phim, diễn viên, đạo diễn,...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="col-md-3 login">
+                <i class="fas fa-user"></i> <a href="login.html">Đăng nhập</a> / <a href="resgister.html">Đăng ký</a>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 menu">
+                <a href="lichchieu.html">LỊCH CHIẾU</a>
+                <a href="rapphim.html">PHIM</a>
+                <a href="#">CỤM RẠP</a>
+                <a href="uu-dai.html">ƯU ĐÃI</a>
+                <a href="tindienanh.html">TIN ĐIỆN ẢNH</a>
+            </div>
+        </div>
+        <div class="row mt-4 p-0">
+            <div class="col-md-4">
+                <div class="card" style="width: 20rem;height: 40rem;">
+                    <img src="images/Frozen 2.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">FROZEN II - NỮ HOÀNG BĂNG GIÁ 2 (P)</h5>
+                        <p class="card-text">Hoạt hình</p>
+                        <a href="#" class="btn btn-primary">2D</a>
+                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 20rem;height: 40rem;">
+                    <img src="images/thien than.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">NHỮNG THIÊN THẦN CỦA CHARLIE (C16)</h5>
+                        <p class="card-text">Hành động</p>
+                        <a href="#" class="btn btn-primary">2D</a>
+                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 20rem;height: 40rem;">
+                    <img src="images/Hoa Hau Giang Ho(1).jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">HOA HẬU GIANG HỒ (C16)</h5>
+                        <p class="card-text">Tâm Lý</p>
+                        <a href="#" class="btn btn-primary">2D</a>
+                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 single-movie-list movie-grid-layout full-grid">
+                <div class="card" style="width: 20rem;height: 40rem;">
+                    <img src="images/phapsumu.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">PHÁP SƯ MÙ (C18)</h5>
+                        <p class="card-text">Kinh dị</p>
+                        <a href="#" class="btn btn-primary">2D</a>
+                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 single-movie-list movie-grid-layout full-grid">
+                <div class="card" style="width: 20rem;height: 40rem;">
+                    <img src="images/Salma.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">SALMA VÀ ĐIỀU ƯỚC NHIỆM MÀU</h5>
+                        <p class="card-text">Hoạt hình</p>
+                        <a href="#" class="btn btn-primary">2D</a>
+                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 single-movie-list movie-grid-layout full-grid">
+                <div class="card" style="width: 20rem;height: 40rem;">
+                    <img src="images/Gia Dinh Adams.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">PHỤ ĐỀ - ADDAMS FAMILY / GIA ĐÌNH ADDAMS (C13)</h5>
+                        <p class="card-text">Hoạt hình</p>
+                        <a href="#" class="btn btn-primary">2D</a>
+                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" style="width: 20rem;height: 40rem;">
+                                <img src="images/Frozen 2.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">FROZEN II - NỮ HOÀNG BĂNG GIÁ 2 (P)</h5>
+                                    <p class="card-text">Hoạt hình</p>
+                                    <a href="#" class="btn btn-primary">2D</a>
+                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="width: 20rem;height: 40rem;">
+                                <img src="images/thien than.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">NHỮNG THIÊN THẦN CỦA CHARLIE (C16)</h5>
+                                    <p class="card-text">Hành động</p>
+                                    <a href="#" class="btn btn-primary">2D</a>
+                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="width: 20rem;height: 40rem;">
+                                <img src="images/Hoa Hau Giang Ho(1).jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">HOA HẬU GIANG HỒ (C16)</h5>
+                                    <p class="card-text">Tâm Lý</p>
+                                    <a href="#" class="btn btn-primary">2D</a>
+                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4 single-movie-list movie-grid-layout full-grid">
+                            <div class="card" style="width: 20rem;height: 40rem;">
+                                <img src="images/phapsumu.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">PHÁP SƯ MÙ (C18)</h5>
+                                    <p class="card-text">Kinh dị</p>
+                                    <a href="#" class="btn btn-primary">2D</a>
+                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 single-movie-list movie-grid-layout full-grid">
+                            <div class="card" style="width: 20rem;height: 40rem;">
+                                <img src="images/Salma.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">SALMA VÀ ĐIỀU ƯỚC NHIỆM MÀU</h5>
+                                    <p class="card-text">Hoạt hình</p>
+                                    <a href="#" class="btn btn-primary">2D</a>
+                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 single-movie-list movie-grid-layout full-grid">
+                            <div class="card" style="width: 20rem;height: 40rem;">
+                                <img src="images/Gia Dinh Adams.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">PHỤ ĐỀ - ADDAMS FAMILY / GIA ĐÌNH ADDAMS (C13)</h5>
+                                    <p class="card-text">Hoạt hình</p>
+                                    <a href="#" class="btn btn-primary">2D</a>
+                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 copyright-box">
+                    <p>2019 © Dcine. All rights reserved - Design by </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

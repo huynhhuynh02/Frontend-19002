@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(172, 170, 170, 0.5);
+}
+.container{
+    width: 100%;
+}
+.container .header{
+    background: black;
+}
+.container .header div{
+    padding: 5px 0;
+}
+.container .header .logo img{
+    width: 60%;
+    padding-left: 20%;
+}
+.container .header .login {
+    padding-left: 5%;
+    line-height: 50px;
+    color: rgb(200, 195, 195);
+}
+.container .header .login a{
+    color: rgb(200, 195, 195);
+}
+.menu{
+    padding: 10px 0;
+    text-align: center;
+    background-image: linear-gradient(#8e0404, #dd0d17);
+}
+.menu a{
+    padding: 0 55px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.copyright{
+    background: black;
+    display: block;
+    margin-top: 25px;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+.copyright-box p {
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-weight: 200;
+}
+.list-box .item{
+    margin: 40px 0;
+}
+.list-box img{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+.list-box .item:hover .p-hover{
+    top: 0;
+    left: 15px;
+    padding: 20px;
+    height: 100%;
+    display: block;
+    width: 80%;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+}
+.p-hover{
+    position: absolute;
+    display: none;
+}
