@@ -1,1 +1,13 @@
-@import "_form.scss"
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+@import "_row.scss";
+@import "_header.scss";
+@import "_slide.scss";
+@import "_info.scss";
+@import "_shop.scss";
+@import "_access.scss"

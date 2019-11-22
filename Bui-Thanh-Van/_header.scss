@@ -1,0 +1,113 @@
+.header {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  opacity: 2;
+  .header-left {
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    h1 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .header-center {
+    width: 100%;
+    text-align: center;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu {
+      list-style: none;
+    }
+    .nav-item {
+      padding: 5px;
+      display: inline-block;
+      font-size: 20px;
+      a {
+        text-decoration: none;
+        color: rgb(129, 121, 112);
+      }
+    }
+    .nav-item-shop {
+      position: relative;
+      .nav-item-shop-child {
+        visibility: hidden;
+        position: absolute;
+        top: 120%;
+        left: 0%;
+        list-style: none;
+        background: black;
+        color: white;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+        transition: 0.3s;
+        z-index: 2;
+        li {
+          font-size: 20px;
+          z-index: 2;
+        }
+      }
+      &:hover{
+        border-radius: 5px;
+        background: black;
+        a {
+        color: white;}
+        
+      }
+      &:hover .nav-item-shop-child {
+        visibility: visible;
+        top: 100%;
+      }
+    }
+    .nav-item-services {
+      position: relative;
+      .nav-item-services-child {
+        visibility: hidden;
+        position: absolute;
+        top: 120%;
+        left: 0%;
+        list-style: none;
+        background: black;
+        color: white;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+        transition: 0.3s;
+        z-index: 2;
+        li {
+          font-size: 20px;
+          z-index: 2;
+        }
+      }
+      &:hover{
+        border-radius: 5px;
+        background: black;
+        a {
+        color: white;}
+        
+      }
+      &:hover .nav-item-services-child {
+        visibility: visible;
+        top: 100%;
+      }
+    }
+  }
+  .header-right {
+    padding: 5px;
+    text-align: right;
+    .header-right-search {
+      font-size: 12px;
+      width: 60px;
+      border: none;
+      color:  rgb(129, 121, 112);
+      outline: none;
+    }
+  }
+}

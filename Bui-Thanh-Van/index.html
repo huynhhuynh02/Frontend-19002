@@ -6,66 +6,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="jquery-3.4.1.js"></script>
-    <script src="popper.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome/css/all.css">
-    <script src="font-awesome/js/all.js"></script>
-    <script src="form.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="form">
-        <div class="form-login">
-            <h1 class="text-primary text-center">Đăng Nhập </h1>
-            <div>
-                <i class="fas fa-phone"></i>
-                <input class="form-login-phone" placeholder="Số điện thoại" type="number">
+    <div class="row">
+        <div class="header">
+            <div class="col-4">
+                <div class="header-left">
+                    <h1>SHOP</h1>
+                </div>
             </div>
-            <div>
-                <i class="fas fa-key"></i>
-                <input class="form-login-pass" placeholder="Mật khẩu" type="password">
+            <div class="col-4">
+                <div class="header-center">
+                    <nav class="nav">
+                        <ul class="nav-menu">
+                            <li class="nav-item nav-item-shop"><a href="">SHOP</a>
+                                <ul class="nav-item-shop-child">
+                                    <li>Single Shop</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="">ABOUT</a></li>
+                            <li class="nav-item nav-item-services"><a href="">SERVICES</a>
+                                <ul class="nav-item-services-child">
+                                    <li>Web Design</li>
+                                    <li>eCommerce</li>
+                                    <li>Branding</li>
+                                    <li>API</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div>
-                <h5 class="p-0 m-0 d-inline-block">2+2=</h5>
-                <input class="form-login-captcha w-75" placeholder="Kết quả" type="text">
-            </div>
-            <div class="btn text-center mt-2 w-100 border-bottom-0">
-                <button type="button" class="btn-login btn btn-outline-primary  w-75">Đăng Nhập</button>
-                <p class="mt-1">Bạn chưa có tài khoản? <span class="hover-btn btn-resgister-back text-danger">Đăng Ký</span> </p>
-            </div>
-        </div>
-        <div class="form-register">
-            <h1 class="text-danger text-center">Đăng Ký Tài Khoản </h1>
-            <div>
-                <i class="fas fa-home"></i>
-                <input class="form-register-tch" placeholder="Tên cửa hàng" type="text">
-            </div>
-            <div>
-                <i class="fas fa-user"></i>
-                <input class="form-register-user" placeholder="Tên người dùng" type="text">
-            </div>
-            <div> 
-                <i class="fas fa-phone"></i>
-                <input class="form-register-phone" placeholder="Số điện thoại" type="number">
-            </div>
-            <div>
-                <i class="fas fa-key"></i>
-                <input class="form-register-pass" placeholder="Mật khẩu" type="password">
-            </div>
-            <div>
-                <i class="fas fa-envelope-square"></i>
-                <input class="form-register-email" placeholder="Địa chỉ Email" type="email">
-            </div>
-            <div class="btn text-center w-100 mt-2 border-bottom-0">
-                <button type="button" class="btn-resgister btn btn-outline-danger  w-75">Đăng Ký</button>
-                <p class="mt-1">Bạn đã có tài khoản? <span class="hover-btn btn-login-back text-primary">Đăng Nhập</span> </p>
+            <div class="col-4">
+                <div class="header-right">
+                    <input class="header-right-search" type="text" class="header-right__search" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
             </div>
         </div>
-        <div class="note"></div>
     </div>
+    <div class="row">
+        <div class="slide">
+            <div class="slide-child" id-slide='0'>
+                <img src="img/img1.jpg" alt="">
+                <div class="slide-child-content">
+                    <p>$540</p>
+                    <h2>ALATO CABINET</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove.</p>
+                    <button>Purchase Now</button>
+                </div>
+            </div>
+            <div class="slide-child" id-slide='1'>
+                <img src="img/img2.jpg" alt="">
+                <div class="slide-child-content">
+                    <p>$540</p>
+                    <h2>ALATO CABINET</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove.</p>
+                    <button>Purchase Now</button>
+                </div>
+            </div>
+            <div class="slide-child" id-slide='2'>
+                <img src="img/img3.jpg" alt="">
+                <div class="slide-child-content">
+                    <p>$540</p>
+                    <h2>ALATO CABINET</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove.</p>
+                    <button>Purchase Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="info">
+            <div class="col-4">
+                <div class="info-left">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>CREDIT CARD</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts. Separated they live in Bookmarksgrove</p>
+                    <button>LEARN MORE </button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="info-center">
+                    <i class="fas fa-money-bill"></i>
+                    <h3>CREDIT CARD</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts. Separated they live in Bookmarksgrove</p>
+                    <button>LEARN MORE </button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="info-right">
+                    <i class="fas fa-truck"></i>
+                    <h3>CREDIT CARD</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts. Separated they live in Bookmarksgrove</p>
+                    <button>LEARN MORE </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="content">
+            <div class="content-child">
+                <h2>PRODUCTS</h2>
+                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit
+                    ab aliquam dolor eius.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="shop">
+            <div class="col-4">
+                <div class="shop-left">
+                    <div class="shop-left-img">
+                        <img src="img/shop1.jpg" alt="">
+                        <div class="shop-left-img-hover">
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    </img>
+                    <h3>HAUTEVILLE CONCRETE ROCKING CHAIR</h3>
+                    <p>$350</p>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="shop-center">
+                    <div class="shop-center-img">
+                        <img src="img/shop2.jpg" alt="">
+                        <div class="shop-center-img-hover">
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>HAUTEVILLE CONCRETE ROCKING CHAIR</h3>
+                    <p>$350</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="shop-right">
+                    <div class="shop-right-img">
+                        <img src="img/shop3.jpg" alt="">
+                        <div class="shop-right-img-hover">
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>HAUTEVILLE CONCRETE ROCKING CHAIR</h3>
+                    <p>$350</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="shop">
+            <div class="col-4">
+                <div class="shop-left">
+                    <div class="shop-left-img">
+                        <img src="img/shop4.jpg" alt="">
+                        <div class="shop-left-img-hover">
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    </img>
+                    <h3>HAUTEVILLE CONCRETE ROCKING CHAIR</h3>
+                    <p>$350</p>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="shop-center">
+                    <div class="shop-center-img">
+                        <img src="img/shop5.jpg" alt="">
+                        <div class="shop-center-img-hover">
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>HAUTEVILLE CONCRETE ROCKING CHAIR</h3>
+                    <p>$350</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="shop-right">
+                    <div class="shop-right-img">
+                        <img src="img/shop6.jpg" alt="">
+                        <div class="shop-right-img-hover">
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>HAUTEVILLE CONCRETE ROCKING CHAIR</h3>
+                    <p>$350</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="slide-bottom">
+            <div class="slide-bottom-top">
+                <p>TESTIMONY</p>
+                <h1>HAPPY CLIENTS</h1>
+            </div>
+            <div class="slide-bottom-bottom">
+                <div class="slide-bottom-child showslide">
+                    <div class="slide-bottom-child-img">
+                        <img src="img/person1.jpg" alt="">
+                    </div>
+                    <p>Jean Doe, via <a href="#" class="twitter">Twitter</a></p>
+                    <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large
+                        language ocean.”</p>
+                </div>
+                <div class="slide-bottom-child">
+                    <div class="slide-bottom-child-img">
+                        <img src="img/person2.jpg" alt="">
+                    </div>
+                    <p>Jean Doe, via <a href="#" class="twitter">Twitter</a></p>
+                    <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large
+                        language ocean.”</p>
+                </div>
+                <div class="slide-bottom-child">
+                    <div class="slide-bottom-child-img">
+                        <img src="img/person3.jpg" alt="">
+                    </div>
+                    <p>Jean Doe, via <a href="#" class="twitter">Twitter</a></p>
+                    <p>“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large
+                        language ocean.”</p>
+                </div>
+                <div class="slide-bottom-btn">
+                    <div class="slide-bottom-btn-child btncolor" id-btn-slide="0"></div>
+                    <div class="slide-bottom-btn-child" id-btn-slide="1"></div>
+                    <div class="slide-bottom-btn-child" id-btn-slide="2"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="access">
+            <div class="col-3">
+                <div class="access-child">
+                    <i class="fas fa-eye"></i>
+                    <div class="access-child-number"></div>
+                    <p>CREATIVITY FUEL</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="access-child">
+                    <i class="fas fa-eye"></i>
+                    <div class="access-child-number"></div>
+                    <p>CREATIVITY FUEL</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="access-child">
+                    <i class="fas fa-eye"></i>
+                    <div class="access-child-number"></div>
+                    <p>CREATIVITY FUEL</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="access-child">
+                    <i class="fas fa-eye"></i>
+                    <div class="access-child-number">10</div>
+                    <p>CREATIVITY FUEL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="font-awesome/js/all.js"></script>
+    <script src="jquery-3.4.1.js"> </script>
+    <script src="index.js"> </script>
 </body>
 
 </html>
