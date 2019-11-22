@@ -1,0 +1,48 @@
+body {
+  background-image: url(img/shoptel-grand-world-phu-quoc-vinpearl-shophouse-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.form {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(0, -50%);
+}
+.form .form-login {
+  display: none;
+}
+.form .form-login div {
+  padding: 10px 10px 10px 0px;
+  border-bottom: 1px solid black;
+}
+.form .form-login div input {
+  border: none;
+  background: none;
+  width: 90%;
+  margin-left: 10px;
+}
+.form .form-register div {
+  padding: 10px 10px 10px 0px;
+  border-bottom: 1px solid black;
+}
+.form .form-register div input {
+  border: none;
+  background: none;
+  width: 90%;
+  margin-left: 10px;
+}
+
+.hover-btn:hover {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

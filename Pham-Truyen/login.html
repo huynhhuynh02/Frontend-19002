@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="icons/css/all.css" type="text/css">
     <link rel="stylesheet" href="rapphim.css">
     <link rel="stylesheet" href="rapphim.js">
+    <link rel="stylesheet" href="lichchieu.html">
+    <link rel="stylesheet" href="uu-dai.html">
+    <link rel="stylesheet" href="rapphim.html">
+    <link rel="stylesheet" href="tindienanh.html">
     <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="resgister.html">
 </head>
 
 <body>
@@ -41,28 +46,38 @@
             </div>
         </div>
     </div>
-    <div class="container" style="background-image: linear-gradient(#471818, #68060b);padding: 40px;">       
-        <div class="row rounded mx-auto d-block" style="background-image: linear-gradient(#a30505, #eb0814);width: 350px;height: 380px;padding: 20px;">
+    <div class="container" style="background-image: linear-gradient(#471818, #68060b);padding: 40px;">
+        <div class="row rounded mx-auto d-block"
+            style="background-image: linear-gradient(#a30505, #eb0814);width: 350px;height: 400px;padding: 20px;">
             <div class="col-md-12">
-                <div class="form-group">
-                    <label for="inputEmail4" style="color: white;">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword4" style="color: white;">Mật khẩu</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <button type="button" style="border: none;width: 100%;padding: 10px;background: rgb(80, 11, 11);border-radius: 5px;color: white;" onclick="logIn()">Đăng nhập</button>
-                </div>
-                <div style="text-align: center;color: rgb(233, 230, 230);margin-top: 20px;">
-                    <span>Có thể đăng ký? </span><a href="resgister.html" style="color: rgb(32, 2, 2);">Tại đây!</a> <br>
-                    <span>Quên mật khẩu?</span>
-                </div>
+                <form method="post" name="myForm" onsubmit="return validateForm()">
+                    <p id="error"></p>
+                    <div class="form-group">
+                        <label for="inputUsername4" style="color: white;">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="user" placeholder="username">
+                        <p id="erroruser"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword4" style="color: white;">Mật khẩu</label>
+                        <input type="password" class="form-control" id="pass" placeholder="password">
+                        <p id="errorpw"></p>
+                    </div>
+                    <p id="errorpwchar"></p>
+                    <div class="form-group">
+                        <button type="submit" style="border: none;width: 100%;padding: 10px;background: rgb(80, 11, 11);border-radius: 5px;color: white;">
+                            Đăng nhập
+                        </button>
+                    </div>
+                    <div style="text-align: center;color: rgb(233, 230, 230);margin-top: 20px;">
+                        <span>Có thể đăng ký? </span><a href="resgister.html" style="color: rgb(32, 2, 2);">Tại đây!</a>
+                        <br>
+                        <span>Quên mật khẩu?</span>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="copyright">
+    <div class="copyright mt-0">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 copyright-box">
@@ -71,6 +86,35 @@
             </div>
         </div>
     </div>
+    <script>
+        function removeAlerts() {
+            document.getElementById("error").innerHTML = "";
+            document.getElementById("erroruser").innerHTML = "";
+            document.getElementById("errorpw").innerHTML = "";
+            document.getElementById("errorpwchar").innerHTML = "";
+        }
+
+        function validateForm() {
+            removeAlerts();
+
+            var username = document.forms["myForm"]["user"].value;
+            var pw = document.forms["myForm"]["pass"].value;
+
+            if (!username && !pw) {
+                document.getElementById("error").innerHTML = "Please input username and password";
+                return false;
+            } else if (username == null || username == "") {
+                document.getElementById("erroruser").innerHTML = "Please input your username";
+                return false;
+            } else if (pw == null || pw == "") {
+                document.getElementById("errorpw").innerHTML = "Please input your password";
+                return false;
+            } else if (pw.length < 6) {
+                document.getElementById("errorpwchar").innerHTML = "your password should be minimum 6 character";
+                return false;
+            }
+        }    
+    </script>
 </body>
 
 </html>

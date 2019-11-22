@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="icons/css/all.css" type="text/css">
+    <link rel="stylesheet" href="rapphim.css">
+    <link rel="stylesheet" href="rapphim.js">
+    <link rel="stylesheet" href="lichchieu.html">
+    <link rel="stylesheet" href="uu-dai.html">
+    <link rel="stylesheet" href="rapphim.html">
+    <link rel="stylesheet" href="tindienanh.html">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="resgister.html">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-3 logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="col-md-6" class="search">
+                <input type="text" style="width: 400px;margin: 10px 0;"
+                    placeholder=" Tìm tên phim, diễn viên, đạo diễn,...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="col-md-3 login">
+                <i class="fas fa-user"></i> <a href="login.html">Đăng nhập</a> / <a href="resgister.html">Đăng ký</a>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 menu">
+                <a href="lichchieu.html">LỊCH CHIẾU</a>
+                <a href="rapphim.html">PHIM</a>
+                <a href="#">CỤM RẠP</a>
+                <a href="uu-dai.html">ƯU ĐÃI</a>
+                <a href="tindienanh.html">TIN ĐIỆN ẢNH</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background-image: linear-gradient(#471818, #68060b);padding: 40px;">
+        <div class="row rounded mx-auto d-block"
+            style="background-image: linear-gradient(#a30505, #eb0814);width: 350px;height: 400px;padding: 20px;">
+            <div class="col-md-12">
+                <form action="#" method="POST" onsubmit="return validation();">
+                    <div class="form-group">
+                        <label for="inputUsername4" style="color: white;">Tên đăng ký</label>
+                        <input type="text" name="username" class="form-control" id="inputUsername4" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail4" style="color: white;">Email</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword4" style="color: white;">Mật khẩu</label>
+                        <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"><i style="color: rgb(255, 255, 255);"> Remember me</i> 
+                    </label>
+                    <div class="form-group">
+                        <button type="submit" style="border: none;width: 100%;padding: 10px;background: rgb(80, 11, 11);border-radius: 5px;color: white;">
+                            Đăng ký
+                        </button>
+                    </div>
+                    <div style="text-align: center;color: rgb(233, 230, 230);margin-top: 20px;">
+                        <span>Có thể đăng nhập? </span><a href="login.html" style="color: rgb(32, 2, 2);">Tại đây!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright mt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 copyright-box">
+                    <p>2019 © Dcine. All rights reserved - Design by </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>$(document).ready(function () {
+
+        });      
+    </script>
 </body>
+
 </html>
