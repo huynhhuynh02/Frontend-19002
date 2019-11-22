@@ -53,8 +53,7 @@ $(function () {
                 if (sodeinthoai.val() == user[i].sodienthoai) {
                     alert("Số điện thoại đã được đăng ký")
                 } else {
-                    user.push(ipuser);
-                    
+                    user.push(ipuser);                    
                 }
 
             }

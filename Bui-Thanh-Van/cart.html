@@ -10,10 +10,80 @@
     <script src="jquery-3.4.1.js"></script>
     <script src="popper.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="cart.js"></script>
+    <script src="font-awesome/js/all.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/all.css">
 </head>
 
 <body>
-    
+    <div class="row p-0 m-0 row-eq-height">
+        <div class="col-md-8 p-0 m-0 border border-primary">
+            <div class="donhang">
+                <table class="donhang-table" style="width:100%">
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 p-0 m-0">
+            <div class="col-md-12 p-0 m-0">
+                <div class="form-hoadon border border-primary">
+                    <h2 class="text-center text-primary">Thông tin đơn hàng</h2>
+                    <div>
+                        <p class="d-inline-block w-50">ID khách hàng:</p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p class="d-inline-block w-50">Thành tiền:</p>
+                        <input type="text" value="0">
+                    </div>
+                    <div>
+                        <p class="d-inline-block w-50">VAT:</p>
+                        <input type="text" value="5%">
+                    </div>
+                    <div>
+                        <p class="d-inline-block w-50">Tổng tiền:</p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p class="d-inline-block w-50">Khách hàng trả:</p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p class="d-inline-block w-50">Tiền thừa:</p>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-0 m-0 mt-1">
+        <div class="col-md-12 p-0 m-0">
+            <div class="btn-danhmuc border border-primary">
+                <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group" role="group" aria-label="First group">
+                        <button onclick="hienthispao()" type="button" class="btn btn-secondary">Áo</button>
+                        <button onclick="hienthispquan()" type="button" class="btn btn-secondary">Quần</button>
+                        <button onclick="hienthitatca()" type="button" class="btn btn-secondary">Tất cả sản
+                            phẩm</button>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="btnGroupAddon2"><i class="fas fa-search"></i></div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Tìm sản phẩm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-0 m-0 mt-1 ">
+
+    </div>
 </body>
 
 </html>
