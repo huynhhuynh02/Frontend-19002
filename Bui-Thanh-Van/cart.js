@@ -85,6 +85,7 @@ function hienthitatca() {
         hienthi += "</div>"
     }
     $(".row").eq(2).html(hienthi)
+    $(".quanlysp-tatcasp .row").html(hienthi);
 }
 function hienthispao() {
     var hienthi = "";
@@ -235,19 +236,19 @@ function resetbill() {
 }
 // Lưu bill in bill
 function luubill() {
-    var luubillidkhach=$(".id-khach").val();
-    var luubillthanhtien=$(".thanhtien").attr("value");
-    var luubilltongtien=$(".tongtien").attr("value");
-    var luubilltienkhach=$(".tienkhach").attr("value");
-    var luubilltienthua=$(".tienthua").attr("value");
-    var luubillmasp=[]
-    for(var i=0;i<giohang.length;i++){
-        var maspoj={
-            masp : giohang[i].id
+    var luubillidkhach = $(".id-khach").val();
+    var luubillthanhtien = $(".thanhtien").attr("value");
+    var luubilltongtien = $(".tongtien").attr("value");
+    var luubilltienkhach = $(".tienkhach").val();
+    var luubilltienthua = $(".tienthua").attr("value");
+    var luubillmasp = []
+    for (var i = 0; i < giohang.length; i++) {
+        var maspoj = {
+            masp: giohang[i].id
         }
         luubillmasp.push(maspoj);
     }
-    var inbill={
+    var inbill = {
         idkhachhang: luubillidkhach,
         thanhtien: luubillthanhtien,
         tongtien: luubilltongtien,
@@ -258,50 +259,82 @@ function luubill() {
     bill.push(inbill);
 }
 // Xuất bill
-function tonghopbill(){
-    var data=""
-    for(var i=0; i <bill.length; i++){
-        var data1=""
-        for(var j=0; j<bill[i].masp.length; j++){
-            data1 +=  bill[i].masp[j].masp + ","
+function tonghopbill() {
+    var data = ""
+    for (var i = 0; i < bill.length; i++) {
+        var data1 = ""
+        for (var j = 0; j < bill[i].masp.length; j++) {
+            data1 += bill[i].masp[j].masp + ","
         }
         data += "<tr>"
         data += "<td class='w-25'>" + bill[i].idkhachhang + "</td>"
         data += "<td class='w-25'>" + data1 + "</td>"
         data += "<td class='w-25'>" + bill[i].tongtien + "</td>"
-        data += "<td> <button class='chitietbill' id-bill='"+ i +"'> Chi tiết </button> </td>"
+        data += "<td> <button class='chitietbill' id-bill='" + i + "'> Chi tiết </button> </td>"
         data += "</tr>"
     }
     $(".show-bill").html(data)
 }
 // Chi tiết bill
-$(document).on("click",".chitietbill",function(){
-    var hienctbill=""
-    for(var i=0;i<bill.length;i++){
-        var data2=""
-        for(var j=0; j<bill[i].masp.length; j++){
-            data1 +=  bill[i].masp[j].masp + ","
-        }
-        hienctbill += "<h2 class='text-center text-dark'>"+ bill[i].idkhachhang +"</h2>"
-        hienctbill += "<p>" + data2 + "</p>"
-        hienctbill += "<p>" + bill[i].thanhtien + "</p>"
-        hienctbill += "<p> Vat: 5% </p>"
-        hienctbill += "<p>" + bill[i].tongtien + "</p>"
-        hienctbill += "<p>" + bill[i].tienkhach + "</p>"
-        hienctbill += "<p>" + bill[i].tienthua + "</p>"
+$(document).on("click", ".chitietbill", function () {
+    var hienctbill = ""
+    var id = $(this).attr("id-bill")
+    var data2 = ""
+    for (var j = 0; j < bill[id].masp.length; j++) {
+        data2 += bill[id].masp[j].masp + ","
     }
+    hienctbill += "<h2 class='text-center text-dark'>" + bill[id].idkhachhang + "</h2>"
+    hienctbill += "<p> Mã sp: </p>"
+    hienctbill += "<p>" + data2 + "</p> </br>"
+    hienctbill += "<p> Thành tiền sản phẩm: </p>"
+    hienctbill += "<p>" + bill[id].thanhtien + "</p> </br>"
+    hienctbill += "<p> Vat: </p>"
+    hienctbill += "<p> 5% </p> </br>"
+    hienctbill += "<p> Tiền khách hàng phải trả: </p>"
+    hienctbill += "<p>" + bill[id].tongtien + "</p>  </br>"
+    hienctbill += "<p> Khách thanh toán: </p>"
+    hienctbill += "<p>" + bill[id].tienkhach + "</p>  </br>"
+    hienctbill += "<p> Tiền thừa: </p>"
+    hienctbill += "<p>" + bill[id].tienthua + "</p>  </br>"
+    hienctbill += "<button class='close-bill'> Đóng </button>"
+    $(".htchitietbill").show();
     $(".htchitietbill").html(hienctbill)
 })
 // Xử lý chuyển trang
-$(document).ready(function(){
+$(document).ready(function () {
     $(".trangadmin").hide();
-    $('.btn-banhang').click(function(){
+    hienthitatca();
+    $('.btn-banhang').click(function () {
         $(".trangbanhang").show();
         $(".trangadmin").hide();
     })
-    $('.btn-trangadmin').click(function(){
+    $('.btn-trangadmin').click(function () {
         $(".trangbanhang").hide();
         $(".trangadmin").show();
         tonghopbill()
+        tongtienbill()
     })
+})
+$(document).on("click",".close-bill",function(){
+    $(".htchitietbill").hide();
+})
+// Tổng cộng bill
+function tongtienbill(){
+    var tongtienbill=0
+    for(var i=0;i<bill.length;i++){
+        tongtienbill += Number(bill[i].tongtien)
+    }
+    $(".httongbill-input").val(tongtienbill)
+}
+// Điều hướng admin
+$(document).ready(function(){
+    $(".btn-thongkedonhang").click(function(){
+       $(".thongkedonhang").show(); 
+       $(".quanlysp").hide(); 
+    })
+    $(".btn-quanlysp").click(function(){
+        $(".thongkedonhang").hide(); 
+        $(".quanlysp").show();
+        hienthitatca();
+     })
 })
