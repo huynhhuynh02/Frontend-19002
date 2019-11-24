@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Rapphim</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="jquery-3.3.1.slim.min.js"></script>
     <script src="popper.min.js"></script>
@@ -39,15 +39,6 @@
                 <a href="tindienanh.html">TIN ĐIỆN ẢNH</a>
             </div>
         </div>
-        <script>
-                function openNav() {
-                    document.getElementById("mobileMenu").style.width = "300px";
-                }
-            
-                function closeNav() {
-                    document.getElementById("mobileMenu").style.width = "0";
-                }
-            </script>
         <div class="row mt-4 p-0">
             <div class="col-md-4">
                 <div class="card" style="width: 20rem;height: 40rem;">
@@ -56,7 +47,7 @@
                         <h5 class="card-title">FROZEN II - NỮ HOÀNG BĂNG GIÁ 2 (P)</h5>
                         <p class="card-text">Hoạt hình</p>
                         <a href="#" class="btn btn-primary">2D</a>
-                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                        <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +58,7 @@
                         <h5 class="card-title">NHỮNG THIÊN THẦN CỦA CHARLIE (C16)</h5>
                         <p class="card-text">Hành động</p>
                         <a href="#" class="btn btn-primary">2D</a>
-                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                        <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                     </div>
                 </div>
             </div>
@@ -78,7 +69,7 @@
                         <h5 class="card-title">HOA HẬU GIANG HỒ (C16)</h5>
                         <p class="card-text">Tâm Lý</p>
                         <a href="#" class="btn btn-primary">2D</a>
-                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                        <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +82,7 @@
                         <h5 class="card-title">PHÁP SƯ MÙ (C18)</h5>
                         <p class="card-text">Kinh dị</p>
                         <a href="#" class="btn btn-primary">2D</a>
-                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                        <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +93,7 @@
                         <h5 class="card-title">SALMA VÀ ĐIỀU ƯỚC NHIỆM MÀU</h5>
                         <p class="card-text">Hoạt hình</p>
                         <a href="#" class="btn btn-primary">2D</a>
-                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                        <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +104,7 @@
                         <h5 class="card-title">PHỤ ĐỀ - ADDAMS FAMILY / GIA ĐÌNH ADDAMS (C13)</h5>
                         <p class="card-text">Hoạt hình</p>
                         <a href="#" class="btn btn-primary">2D</a>
-                        <a href="#" class="btn btn-primary">Đặt vé</a>
+                        <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +126,7 @@
                                     <h5 class="card-title">FROZEN II - NỮ HOÀNG BĂNG GIÁ 2 (P)</h5>
                                     <p class="card-text">Hoạt hình</p>
                                     <a href="#" class="btn btn-primary">2D</a>
-                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                    <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +137,7 @@
                                     <h5 class="card-title">NHỮNG THIÊN THẦN CỦA CHARLIE (C16)</h5>
                                     <p class="card-text">Hành động</p>
                                     <a href="#" class="btn btn-primary">2D</a>
-                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                    <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +148,7 @@
                                     <h5 class="card-title">HOA HẬU GIANG HỒ (C16)</h5>
                                     <p class="card-text">Tâm Lý</p>
                                     <a href="#" class="btn btn-primary">2D</a>
-                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                    <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +163,7 @@
                                     <h5 class="card-title">PHÁP SƯ MÙ (C18)</h5>
                                     <p class="card-text">Kinh dị</p>
                                     <a href="#" class="btn btn-primary">2D</a>
-                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                    <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +174,7 @@
                                     <h5 class="card-title">SALMA VÀ ĐIỀU ƯỚC NHIỆM MÀU</h5>
                                     <p class="card-text">Hoạt hình</p>
                                     <a href="#" class="btn btn-primary">2D</a>
-                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                    <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +185,7 @@
                                     <h5 class="card-title">PHỤ ĐỀ - ADDAMS FAMILY / GIA ĐÌNH ADDAMS (C13)</h5>
                                     <p class="card-text">Hoạt hình</p>
                                     <a href="#" class="btn btn-primary">2D</a>
-                                    <a href="#" class="btn btn-primary">Đặt vé</a>
+                                    <a href="#" onclick="datve()" class="btn btn-primary">Đặt vé</a>
                                 </div>
                             </div>
                         </div>
@@ -220,6 +211,7 @@
             </div>
         </div>
     </div>
+    <script src="rapphim.js"></script>
 </body>
 
 </html>

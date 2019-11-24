@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Resgister</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="jquery-3.3.1.slim.min.js"></script>
     <script src="popper.min.js"></script>
@@ -50,24 +50,27 @@
         <div class="row rounded mx-auto d-block"
             style="background-image: linear-gradient(#a30505, #eb0814);width: 350px;height: 400px;padding: 20px;">
             <div class="col-md-12">
-                <form action="#" method="POST" onsubmit="return validation();">
+                <form class="user-info-form" action="#" method="POST" onsubmit="return validation();">
+                    <p id="error"></p>
                     <div class="form-group">
-                        <label for="inputUsername4" style="color: white;">Tên đăng ký</label>
-                        <input type="text" name="username" class="form-control" id="inputUsername4" placeholder="Username">
+                        <label for="inputUsername4" style="color: white;">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="user" placeholder="username">
+                        <p id="erroruser"></p>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail4" style="color: white;">Email</label>
-                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="email">
+                        <div id="erroremail"></div>
                     </div>
                     <div class="form-group">
                         <label for="inputPassword4" style="color: white;">Mật khẩu</label>
-                        <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        <input type="password" class="form-control" id="pass" placeholder="password">
+                        <p id="errorpw"></p>
                     </div>
-                    <label class="checkbox">
-                        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"><i style="color: rgb(255, 255, 255);"> Remember me</i> 
-                    </label>
+                    <p id="errorpwchar"></p>
                     <div class="form-group">
-                        <button type="submit" style="border: none;width: 100%;padding: 10px;background: rgb(80, 11, 11);border-radius: 5px;color: white;">
+                        <button type="submit"
+                            style="border: none;width: 100%;padding: 10px;background: rgb(80, 11, 11);border-radius: 5px;color: white;">
                             Đăng ký
                         </button>
                     </div>
@@ -87,10 +90,39 @@
             </div>
         </div>
     </div>
-    <script src="jquery-3.4.1.js"></script>
-    <script>$(document).ready(function () {
+    <script>
+        function removeAlerts() {
+            document.getElementById("error").innerHTML = "";
+            document.getElementById("erroruser").innerHTML = "";
+            document.getElementById("erroremail").innerHTML = "";
+            document.getElementById("errorpw").innerHTML = "";
+            document.getElementById("errorpwchar").innerHTML = "";
+        }
 
-        });      
+        function validateForm() {
+            removeAlerts();
+
+            var username = document.forms["myForm"]["user"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var pw = document.forms["myForm"]["pass"].value;
+
+            if (!username && !email && !pw) {
+                document.getElementById("error").innerHTML = "Please input username, email and password";
+                return false;
+            } else if (username == null || username == "") {
+                document.getElementById("erroruser").innerHTML = "Please input your username";
+                return false;
+            } else if (email == null || email == "") {
+                document.getElementById("erroremail").innerHTML = "Please input your email";
+                return false;
+            } else if (pw == null || pw == "") {
+                document.getElementById("errorpw").innerHTML = "Please input your password";
+                return false;
+            } else if (pw.length < 6) {
+                document.getElementById("errorpwchar").innerHTML = "your password should be minimum 6 character";
+                return false;
+            }
+        }    
     </script>
 </body>
 
