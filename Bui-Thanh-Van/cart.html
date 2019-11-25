@@ -13,6 +13,39 @@
     <script src="cart.js"></script>
     <script src="font-awesome/js/all.js"></script>
     <link rel="stylesheet" href="font-awesome/css/all.css">
+    <style>
+        .htchitietbill {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%, 0);
+            background: rgb(192, 190, 190);
+            color: rgb(0, 0, 0);
+            width: 350px;
+            height: 400px;
+            padding: 10px;
+        }
+
+        .htchitietbill p {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .httongbill {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        .httongbill .httongbill-input{
+            border: none;
+            font-weight: bold;
+            font-size: 23px;
+        }
+        .quanlysp{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,35 +131,47 @@
     </div>
     <div class="trangadmin">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" onclick="tonghopbill()" class="btn btn-secondary">Thống kê đơn hàng</button>
-            <button type="button" class="btn btn-secondary">Quản lý sản phẩm</button>
-            <button type="button" class="btn btn-secondary">Quản lý danh mục</button>
+            <button type="button" onclick="tonghopbill()" class="btn-thongkedonhang btn btn-secondary">Thống kê đơn hàng</button>
+            <button type="button" onclick="hienthitatca()" class="btn-quanlysp btn btn-secondary">Quản lý sản phẩm</button>
             <button type="button" class="btn btn-secondary">Quản lý khách hàng</button>
             <button type="button" class="btn btn-secondary">Quản lý nhà cung cấp</button>
         </div>
-        <div class="row p-0 m-0">
-            <div class="col-md-12 p-0 m-0">
-                <table class="w-100">
-                    <tr>
-                        <td class="w-25">Tên khách hàng/id khách hàng</td>
-                        <td class="w-25">Mã sp đã mua</td>
-                        <td class="w-25">Thành tiền</td>
-                        <td>Thông tin</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-md-12 p-0 m-0">
-                <table class="show-bill w-100">
+        <div class="thongkedonhang">
+            <div class="row p-0 m-0">
+                <div class="col-md-12 p-0 m-0">
+                    <table class="w-100">
+                        <tr>
+                            <td class="w-25">Tên khách hàng/id khách hàng</td>
+                            <td class="w-25">Mã sp đã mua</td>
+                            <td class="w-25">Thành tiền</td>
+                            <td>Thông tin</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-12 p-0 m-0">
+                    <table class="show-bill w-100">
 
-                </table>
+                    </table>
+                </div>
+                <div class="httongbill">
+                    <h4 class="d-inline-block">Tổng tiền trong ngày</h4>
+                    <input class="httongbill-input" type="text">
+                </div>
             </div>
-                
+        </div>
+        <div class="quanlysp">
+            <div>Hello</div>
             
+            <div class="quanlysp-tatcasp">
+                <div class="row p-0 m-0"></div> 
+            </div>
+                       
         </div>
     </div>
     <div class="htchitietbill">
 
     </div>
+
 </body>
 
 </html>
