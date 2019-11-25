@@ -75,4 +75,17 @@ body{
     display: none;
 }
 
-
+/* đặt vé */
+.chair{
+    padding: 50px 150px;
+}
+.blue{
+    background: #2688C4;
+    color: cornsilk;
+    margin: 2px;
+}
+.red{
+    background: #B72929;
+    color: cornsilk;
+    margin: 2px;
+}

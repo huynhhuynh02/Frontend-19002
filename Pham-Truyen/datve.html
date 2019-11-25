@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="icons/css/all.css" type="text/css">
+    <link rel="stylesheet" href="rapphim.css">
+    <link rel="stylesheet" href="rapphim.js">
+    <link rel="stylesheet" href="lichchieu.html">
+    <link rel="stylesheet" href="uu-dai.html">
+    <link rel="stylesheet" href="rapphim.html">
+    <link rel="stylesheet" href="tindienanh.html">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="resgister.html">
+    <link rel="stylesheet" href="datve.html">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-3 logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="col-md-6" class="search">
+                <input type="text" style="width: 400px;margin: 10px 0;"
+                    placeholder=" Tìm tên phim, diễn viên, đạo diễn,...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="col-md-3 login" id="authIsset">
+                <i class="fas fa-user"></i> <a href="login.html">Đăng nhập</a> / <a href="resgister.html">Đăng ký</a>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 menu">
+                <a href="lichchieu.html">LỊCH CHIẾU</a>
+                <a href="rapphim.html">PHIM</a>
+                <a href="#">CỤM RẠP</a>
+                <a href="uu-dai.html">ƯU ĐÃI</a>
+                <a href="tindienanh.html">TIN ĐIỆN ẢNH</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center p-1" style="background: rgb(31, 25, 25);color: #fff;">
+            <h1>Chọn ghế</h1>
+        </div>
+        <div class="row chair" style="background-image: linear-gradient(#302f2f, #161616);">
+            <div class="col-md-12">
+                <div class="row" style="height: 70px;text-align: center;line-height: 50px;">
+                    <div onclick="doimau()" id="yellow" class="col blue">A01</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A02</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A03</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A04</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A05</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A06</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A07</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A08</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A09</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">A10</div>
+                    <div class="col blue" style="background: gray !important;">A11</div>
+                    <div class="col blue" style="background: gray !important;">A12</div>
+                </div>
+                <div class="row" style="height: 70px;text-align: center;line-height: 50px;">
+                    <div onclick="doimau()" id="yellow" class="col blue">B01</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B02</div>
+                    <div class="col blue" style="background: gray !important;">B03</div>
+                    <div class="col blue" style="background: gray !important;">B04</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B05</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B06</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B07</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B08</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B09</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B10</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B11</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">B12</div>
+                </div>
+                <div class="row" style="height: 70px;text-align: center;line-height: 50px;">
+                    <div onclick="doimau()" id="yellow" class="col blue">C01</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C02</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C03</div>
+                    <div class="col blue" style="background: gray !important;">C04</div>
+                    <div class="col blue" style="background: gray !important;">C05</div>
+                    <div class="col blue" style="background: gray !important;">C06</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C07</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C08</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C09</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C10</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C11</div>
+                    <div onclick="doimau()" id="yellow" class="col blue">C12</div>
+                </div>
+                <div class="row" style="height: 70px;text-align: center;line-height: 50px;">
+                    <div onclick="doimau()" id="yellow" class="col red">D01</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D02</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D03</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D04</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D05</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D06</div>
+                    <div class="col red" style="background: gray !important;">D07</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D08</div>
+                    <div class="col red" style="background: gray !important;">D09</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D10</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D11</div>
+                    <div onclick="doimau()" id="yellow" class="col red">D12</div>
+                </div>
+                <div class="row" style="height: 70px;text-align: center;line-height: 50px;">
+                    <div onclick="doimau()" id="yellow" class="col red">E01</div>
+                    <div class="col red" style="background: gray !important;">E02</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E03</div>
+                    <div class="col red" style="background: gray !important;">E04</div>
+                    <div class="col red" style="background: gray !important;">E05</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E06</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E07</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E08</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E09</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E10</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E11</div>
+                    <div onclick="doimau()" id="yellow" class="col red">E12</div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center p-1" style="background: #fff;">
+            <div class="col-md-4">
+                <h4>Chú thích màu sắc:</h4>
+                <div class="note">
+                    <p style="width: 20px;height: 20px; padding: 3px;margin: 2px; background: #2688C4;float: left;"></p>
+                    <p> Ghế thường</p>
+                </div>
+                <div class="note">
+                    <p style="width: 20px;height: 20px; padding: 3px;margin: 2px;background: #B72929;float: left;"></p>
+                    <p> Ghế VIP</p>
+                </div>
+                <div class="note">
+                    <p style="width: 20px;height: 20px; padding: 3px;margin: 2px;background: gray;float: left;"></p>
+                    <p> Ghế đã bán</p>
+                </div>
+                <div class="note">
+                    <p style="width: 20px;height: 20px; padding: 3px;margin: 2px;background: yellow;float: left;"></p>
+                    <p> Ghế đang chọn</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4>Giá vé:</h4>
+                <h6>Ghế thường: 50.000 đồng</h6>
+                <h6>Ghế VIP: 80.000 đồng</h6>
+            </div>
+            <div class="col-md-4" style="text-align: center;margin: 20px 0;">
+                <button onclick="xacnhan()" style="background: #CC4242;color: #fff;padding: 15px;border: none;border-radius: 5px;">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+    <div class="copyright mt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 copyright-box">
+                    <p>2019 © Dcine. All rights reserved - Design by </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var flag=false;
+        function doimau(){
+            flag=!flag;
+            if(flag){
+                document.getElementById('yellow').style.background='yellow';
+            }else{
+                document.getElementById('yellow').style.background='#2688C4';
+            }
+            
+        }
+        function xacnhan(){
+            alert('Đặt vé thành công');
+            window.location.href="rapphim.html";
+        }
+    </script>
+</body>
+
+</html>

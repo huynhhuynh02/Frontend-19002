@@ -32,7 +32,7 @@
                     placeholder=" Tìm tên phim, diễn viên, đạo diễn,...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </div>
-            <div class="col-md-3 login">
+            <div class="col-md-3 login" id="checkLogin">
                 <i class="fas fa-user"></i> <a href="login.html">Đăng nhập</a> / <a href="resgister.html">Đăng ký</a>
             </div>
         </div>
@@ -86,6 +86,7 @@
             </div>
         </div>
     </div>
+    <script src="rapphim.js"></script>
     <script>
         function removeAlerts() {
             document.getElementById("error").innerHTML = "";
@@ -112,6 +113,19 @@
             } else if (pw.length < 6) {
                 document.getElementById("errorpwchar").innerHTML = "your password should be minimum 6 character";
                 return false;
+            }else{
+               var auth = JSON.parse(window.localStorage.getItem('auth'));
+               console.log(auth);
+               if(username==auth[0].username && pw==auth[0].pass){
+                    window.location.href="rapphim.html";
+                   
+                   alert("đăng nhập thành công !!!");
+                   return false;
+               }else{
+                   alert("đăng nhập thất bại");
+                return false;
+               }
+              
             }
         }    
     </script>
