@@ -13,77 +13,165 @@
     <script src="cart.js"></script>
     <script src="font-awesome/js/all.js"></script>
     <link rel="stylesheet" href="font-awesome/css/all.css">
+    <style>
+        .htchitietbill {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%, 0);
+            background: rgb(192, 190, 190);
+            color: rgb(0, 0, 0);
+            width: 350px;
+            height: 400px;
+            padding: 10px;
+        }
+
+        .htchitietbill p {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .httongbill {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        .httongbill .httongbill-input{
+            border: none;
+            font-weight: bold;
+            font-size: 23px;
+        }
+        .quanlysp{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="row p-0 m-0 row-eq-height">
-        <div class="col-md-8 p-0 m-0 border border-primary">
-            <div class="donhang">
-                <table class="donhang-table" style="width:100%">
-                    <tr>
-                        <th>Sản phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th></th>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="col-md-4 p-0 m-0">
-            <div class="col-md-12 p-0 m-0">
-                <div class="form-hoadon border border-primary">
-                    <h2 class="text-center text-primary">Thông tin đơn hàng</h2>
-                    <div>
-                        <p class="d-inline-block w-50">ID khách hàng:</p>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p class="d-inline-block w-50">Thành tiền:</p>
-                        <input type="text" value="0">
-                    </div>
-                    <div>
-                        <p class="d-inline-block w-50">VAT:</p>
-                        <input type="text" value="5%">
-                    </div>
-                    <div>
-                        <p class="d-inline-block w-50">Tổng tiền:</p>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p class="d-inline-block w-50">Khách hàng trả:</p>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p class="d-inline-block w-50">Tiền thừa:</p>
-                        <input type="text">
-                    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn-banhang btn btn-secondary">Bán Hàng</button>
+        <button type="button" class="btn-trangadmin btn btn-secondary">Admin</button>
+    </div>
+    <div class="trangbanhang">
+        <div class="row p-0 m-0 row-eq-height">
+            <div class="col-md-8 p-0 m-0 border border-primary">
+                <div>
+                    <table style="width:100%">
+                        <tr>
+                            <td class="w-25">Sản phẩm</td>
+                            <td>Số lượng</td>
+                            <td>Giá</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="donhang">
+                    <table class="donhang-table" style="width:100%">
+
+                    </table>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row p-0 m-0 mt-1">
-        <div class="col-md-12 p-0 m-0">
-            <div class="btn-danhmuc border border-primary">
-                <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                    <div class="btn-group" role="group" aria-label="First group">
-                        <button onclick="hienthispao()" type="button" class="btn btn-secondary">Áo</button>
-                        <button onclick="hienthispquan()" type="button" class="btn btn-secondary">Quần</button>
-                        <button onclick="hienthitatca()" type="button" class="btn btn-secondary">Tất cả sản
-                            phẩm</button>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text" id="btnGroupAddon2"><i class="fas fa-search"></i></div>
+            <div class="col-md-4 p-0 m-0">
+                <div class="col-md-12 p-0 m-0">
+                    <div class="form-hoadon border border-primary">
+                        <h2 class="text-center text-primary">Thông tin đơn hàng</h2>
+                        <div>
+                            <p class="d-inline-block w-50">ID khách hàng:</p>
+                            <input class="id-khach" type="text" value="Khách lẻ">
                         </div>
-                        <input type="text" class="form-control" placeholder="Tìm sản phẩm">
+                        <div>
+                            <p class="d-inline-block w-50">Thành tiền:</p>
+                            <input class="thanhtien" type="text" value="0">
+                        </div>
+                        <div>
+                            <p class="d-inline-block w-50">VAT:</p>
+                            <p class="d-inline-block"> 5%</p>
+                        </div>
+                        <div>
+                            <p class="d-inline-block w-50">Tổng tiền:</p>
+                            <input class="tongtien" type="text">
+                        </div>
+                        <div>
+                            <p class="d-inline-block w-50">Khách hàng trả:</p>
+                            <input class="tienkhach" type="text">
+                        </div>
+                        <div>
+                            <p class="d-inline-block w-50">Tiền thừa:</p>
+                            <input class="tienthua" type="text" value="0">
+                        </div>
+                        <button onclick="luubill()"> In bill </button>
+                        <button onclick="resetbill()"> Reset Bill </button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row p-0 m-0 mt-1">
+            <div class="col-md-12 p-0 m-0">
+                <div class="btn-danhmuc border border-primary">
+                    <div class="btn-toolbar justify-content-between" role="toolbar"
+                        aria-label="Toolbar with button groups">
+                        <div class="btn-group" role="group" aria-label="First group">
+                            <button onclick="hienthispao()" type="button" class="btn btn-secondary">Áo</button>
+                            <button onclick="hienthispquan()" type="button" class="btn btn-secondary">Quần</button>
+                            <button onclick="hienthitatca()" type="button" class="btn btn-secondary">Tất cả sản
+                                phẩm</button>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon2"><i class="fas fa-search"></i></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Tìm sản phẩm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-0 m-0 mt-1 ">
+        </div>
     </div>
-    <div class="row p-0 m-0 mt-1 ">
+    <div class="trangadmin">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" onclick="tonghopbill()" class="btn-thongkedonhang btn btn-secondary">Thống kê đơn hàng</button>
+            <button type="button" onclick="hienthitatca()" class="btn-quanlysp btn btn-secondary">Quản lý sản phẩm</button>
+            <button type="button" class="btn btn-secondary">Quản lý khách hàng</button>
+            <button type="button" class="btn btn-secondary">Quản lý nhà cung cấp</button>
+        </div>
+        <div class="thongkedonhang">
+            <div class="row p-0 m-0">
+                <div class="col-md-12 p-0 m-0">
+                    <table class="w-100">
+                        <tr>
+                            <td class="w-25">Tên khách hàng/id khách hàng</td>
+                            <td class="w-25">Mã sp đã mua</td>
+                            <td class="w-25">Thành tiền</td>
+                            <td>Thông tin</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-12 p-0 m-0">
+                    <table class="show-bill w-100">
+
+                    </table>
+                </div>
+                <div class="httongbill">
+                    <h4 class="d-inline-block">Tổng tiền trong ngày</h4>
+                    <input class="httongbill-input" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="quanlysp">
+            <div>Hello</div>
+            
+            <div class="quanlysp-tatcasp">
+                <div class="row p-0 m-0"></div> 
+            </div>
+                       
+        </div>
+    </div>
+    <div class="htchitietbill">
 
     </div>
+
 </body>
 
 </html>
