@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="nhatdat_trangchu.css">
     <link rel="shortcut icon" type="image/png" href="houses.png"/>
-    <title>Document</title>
+    <title>Trang mua bán nhà đất hàng đầu</title>
+    <style>
+       
+    </style>
 </head>
+
 <body>
     <nav class="navbar p-0 py-1 fixed-top navbar-expand-lg navbar-dark  ">
-        <a class="trangchu navbar-brand pl-md-2" href="#" title="Home"><i class="fas fa-home"></i>  Trang chủ</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="trangchu navbar-brand pl-md-2" href="nhatdat_trangchu.html" title="Home"><i class="fas fa-home"></i>  Trang chủ</a>
+        <button class="navbar-toggler" type="button"  onclick="openNav()" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,22 +31,22 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item tit disabled" href="#"><i class="fas fa-home  dropdown-icon"></i> Nhà</a>
-                <a class="dropdown-item " href="#">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
-                <a class="dropdown-item" href="#">Nhà nguyên căn</a>
-                <a class="dropdown-item" href="#">Biệt thự</a>
+                <a class="dropdown-item " href="list_muaban.html">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Nhà nguyên căn</a>
+                <a class="dropdown-item" href="list_muaban.html">Biệt thự</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item tit disabled" href="#"><i class="far fa-building dropdown-icon"></i> Căn Hộ & Chung Cư</a>
-                <a class="dropdown-item" href="#">Căn hộ cao cấp <span class="badge badge-warning">New</span></a>
-                <a class="dropdown-item" href="#">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Căn hộ cao cấp <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i> Đất</a>
-                <a class="dropdown-item" href="#">Đất thổ cư <span class="badge badge-warning">New</span></a>
-                <a class="dropdown-item" href="#">Đất nề dự án</a>
-                <a class="dropdown-item" href="#">Đất nông nghiệp</a>
+                <a class="dropdown-item" href="list_muaban.html">Đất thổ cư <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Đất nề dự án</a>
+                <a class="dropdown-item" href="list_muaban.html">Đất nông nghiệp</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item tit disabled" href="#"><i class="fas fa-anchor dropdown-icon"></i> Mặt Bằng</a>
-                <a class="dropdown-item" href="#">Cửa hàng</a>
-                <a class="dropdown-item" href="#">Văn Phòng <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Cửa hàng</a>
+                <a class="dropdown-item" href="list_muaban.html">Văn Phòng <span class="badge badge-primary">Sale</span></a>
               </div>
             </li>
             <li class="nav-item dropdown ">
@@ -51,22 +55,22 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item tit disabled" href="#"><i class="fas fa-home  dropdown-icon"></i> Nhà</a>
-                <a class="dropdown-item " href="#">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
-                <a class="dropdown-item" href="#">Nhà nguyên căn <span class="badge badge-primary">Sale</span></a>
-                <a class="dropdown-item" href="#">Biệt thự</a>
+                <a class="dropdown-item " href="list_muaban.html">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Nhà nguyên căn <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Biệt thự</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item tit disabled" href="#"><i class="far fa-building dropdown-icon"></i> Căn Hộ & Chung Cư</a>
-                <a class="dropdown-item" href="#">Căn hộ cao cấp</a>
-                <a class="dropdown-item" href="#">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Căn hộ cao cấp</a>
+                <a class="dropdown-item" href="list_muaban.html">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i> Đất</a>
-                <a class="dropdown-item" href="#">Đất thổ cư</a>
-                <a class="dropdown-item" href="#">Đất nền dự án <span class="badge badge-warning">New</span></a>
-                <a class="dropdown-item" href="#">Đất nông nghiệp</a>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i>Phòng trọ</a>
+                <a class="dropdown-item" href="list_muaban.html">Phòng trọ giá rẻ</a>
+                <a class="dropdown-item" href="list_muaban.html">Phòng trọ sinh viên<span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Phòng trọ cao cấp</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item tit disabled" href="#"><i class="fas fa-anchor dropdown-icon"></i> Mặt Bằng</a>
-                <a class="dropdown-item" href="#">Cửa hàng <span class="badge badge-warning">New</span></a>
-                <a class="dropdown-item" href="#">Văn Phòng</a>
+                <a class="dropdown-item" href="list_muaban.html">Cửa hàng <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Văn Phòng</a>
               </div>
             </li>
             <li class="nav-item dropdown ">
@@ -74,21 +78,21 @@
                 Dự án
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Khu căn hộ chung cư <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu căn hộ chung cư <span class="badge badge-warning">New</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu phức hợp <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu phức hợp <span class="badge badge-danger">Hot</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu dân cư <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu dân cư <span class="badge badge-primary">Sale</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu đô thị<span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu đô thị<span class="badge badge-warning">New</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu  du lịch & nghỉ dưỡng<span class="badge badge-warning"></span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu  du lịch & nghỉ dưỡng<span class="badge badge-warning"></span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu du lịch dịch vụ</a>
+                <a class="dropdown-item" href="list_muaban.html">Khu du lịch dịch vụ</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu công nghiệp <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu công nghiệp <span class="badge badge-warning">New</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Khu cao ốc văn phòng <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Khu cao ốc văn phòng <span class="badge badge-warning">New</span></a>
               </div>
             </li>
             <li class="nav-item dropdown ">
@@ -96,10 +100,10 @@
                 Tin tức
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Thị trường nhà đất <span class="badge badge-danger">Hot</span></a>
-                <a class="dropdown-item" href="#">Sự kiện doanh nghiệp <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Thị trường nhà đất <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Sự kiện doanh nghiệp <span class="badge badge-danger">Hot</span></a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item tit" href="#">Phong thủy <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item tit" href="list_muaban.html">Phong thủy <span class="badge badge-warning">New</span></a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -107,23 +111,74 @@
                 Trợ giúp
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Kinh nghiệm mua <span class="badge badge-danger">Hot</span></a>
-                <a class="dropdown-item" href="#">Kinh nghiệm bán <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Kinh nghiệm mua <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Kinh nghiệm bán <span class="badge badge-danger">Hot</span></a>
               </div>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2 w-sm-auto" style="width: 350px;" type="search" placeholder="Tìm kiếm nhanh" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" title="Tìm kiếm">Search</button>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" title="Tìm kiếm"><a class="text-white" href="list_muaban.html">Search</a></button>
           </form>
           <ul class="nav navbar-nav navbar-right ml-md-5">
-            <li class="nav-item  text-center" title="Đăng Nhập" onclick="document.getElementById('login').style.display='block'"><a class="nav-link badge badge-dark p-3 ml-md-3" href="#" style="color:white"><i class="fas fa-user"></i> Sign Up</a></li>
-            <li class="nav-item text-center" title="Đăng xuất" ><a class="nav-link badge badge-dark p-3 ml-md-2" href="#" style="color:white"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li class="nav-item  text-center login-disabled" title="Đăng Nhập" onclick="document.getElementById('login').style.display='block'"><a class="nav-link login-user login-disabled" href="#" style="color:white"><i class="fas fa-user"></i> Sign In</a></li>
+            <li class="nav-item text-center" title="Đăng xuất" ><a class="nav-link logout-user" href="#" style="color:white"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
           </ul>
         </div>
       </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+            <div class="h3 text-white text-center "><i class="fas fa-home"></i> Trang chủ</div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-buy">Mua bán</button>
+            <div class="list-group menu-list-buy">
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-home  dropdown-icon"></i> Nhà <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="far fa-building dropdown-icon"></i> Căn hộ & chung cư <span class="badge badge-danger">Hot</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-globe-asia dropdown-icon"></i> Đất <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-anchor dropdown-icon"></i>Mặt bằng <span class="badge badge-primary">Sale</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-lease">Cho thuê</button>
+            <div class="list-group menu-list-lease">
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-home  dropdown-icon"></i> Nhà <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="far fa-building dropdown-icon"></i> Căn hộ & chung cư</button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-globe-asia dropdown-icon"></i> Phòng trọ <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-anchor dropdown-icon"></i>Mặt bằng <span class="badge badge-primary">Sale</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-project">Thông tin dự án</button>
+            <div class="list-group menu-list-project">
+                <button type="button" class="list-group-item list-group-item-action"> Khu đô thị <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu chung cư</button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu dân cư <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu phức hợp </button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu du lịch dịch vụ </button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu du lịch nghỉ dưỡng <span class="badge badge-primary">Sale</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu cao ốc văn phòng </button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-new">Tin tức thị trường</button>
+            <div class="list-group menu-list-new">
+                <button type="button" class="list-group-item list-group-item-action"> Thị trường nhà đất <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Sự kiện doanh nghiệp</button>
+                <button type="button" class="list-group-item list-group-item-action"> Quy định - Chính sách <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Phong thủy <span class="badge badge-danger">Hot</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-help">Trợ giúp</button>
+            <div class="list-group menu-list-help">
+                <button type="button" class="list-group-item list-group-item-action"> Luật <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Kinh nghiệm mua bán</button>
+                <button type="button" class="list-group-item list-group-item-action"> Quy định - Chính sách <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Kinh nghiệm tìm kiếm <span class="badge badge-danger">Hot</span></button>
+            </div> 
+            <input class="mt-5" type="text" name="search" id="" placeholder="Tìm kiếm">
+            <div class="text-center"><button type="submit" class="btn btn-info">Tìm Kiếm</button></div>   
+            <div class="row mt-5">
+                <div class="col text-center"><div><button class="btn btn-dark py-2 menu-login" onclick="document.getElementById('login').style.display='block'" style="width:100%"><i class="fas fa-user"></i> Login</button></div></div>
+                <div class="col textcenter"><div><button class="btn btn-dark py-2 " style="width:100%"><i class="fas fa-sign-out-alt"></i> Logout</button></div></div>
+            </div>
+        </div>
+    </div>
+
     <div id="login" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="modal-content animate" action="#" method="post"></form>
             <div class="imgcontainer">
             <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -131,12 +186,13 @@
         
             <div class="container">
             <label for="uname"><b>Tên đăng nhập</b></label>
-            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" required>
+            <input type="text" placeholder="Nhập tên đăng nhập" id="user" name="uname" required>
         
             <label for="psw"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Mật khẩu" name="psw" required>
+            <input type="password" placeholder="Mật khẩu" id="pass" name="psw" required>
                 
-            <button class="button-login"  type="submit">Đăng nhập</button>
+            <button class="button-login" id="login-btn" type="button">Đăng nhập</button>
+            <button class="button-login" style="background-color: rebeccapurple !important;" id="register-btn" type="button"><a href="register.html" style="text-decoration:none; color:white">Đăng kí</a></button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
             </label>
@@ -144,9 +200,9 @@
         
             <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Quên <a href="#"> mật khẩu?</a></span>
+            <span class="psw">Quên <a href="#"> mật khẩu</a> ?</span>
             </div>
-        </form>
+        </div>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -169,7 +225,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid  ">
+        <div class="container-fluid mt-1 p-md">
+            <div class="h5 text-center text-light py-1 border-bottom bg-info mb-1">DỰ ÁN NỔI BẬT</div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators m-0">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -179,14 +237,14 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row">
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class=" col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="nha-lien-ke-va-biet-thu-song-lap-1574139590.22 (1).jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2 d-md-block d-none">
+                                    <div class="text-info">
                                         <h3>Dự án khu dân cư Khanh Cát</h3>
-                                        <p>Chủ đầu tư và phân phối: <a href="">DNTN Khanh Cát</a></p>
-                                        <p> Địa chỉ: Đường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</p>
+                                        <p>Chủ đầu tư và phân phối: DNTN Khanh Cát</p>
+                                        <p class="text-secondary"><small> Địa chỉ: Đường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</small></p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -194,14 +252,14 @@
                                 </div>
                             </div> 
                         </div>
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class="d-md-block d-none col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="phoi-canh-1-960x720.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2  d-md-block d-none">
+                                    <div class="text-info">
                                         <h3>Khu đô thị Thiên Mã</h3>
-                                        <p>Chủ đầu tư: <a href="">Công ty CP Xây Dựng và Đầu tư Hoàng Phát</a></p>
-                                        <p> Địa chỉ: Quốc lộ 21A, xã Sơn Đông, thị xã Sơn Tây, Hà Nội</p>
+                                        <p>Chủ đầu tư: <a href=""></a>Công ty CP Xây Dựng và Đầu tư Hoàng Phát</a></p>
+                                        <p class="text-secondary"><small> Địa chỉ: Quốc lộ 21A, xã Sơn Đông, thị xã Sơn Tây, Hà Nội</small></p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -209,14 +267,14 @@
                                 </div>
                             </div> 
                         </div>
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class="d-md-block d-none col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="tien-ich-aqua-city-novaland-960x720.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                <div class="box2  d-md-block d-none">
+                                    <div class="text-info">
                                         <h3>TNR Stars Cao Bằng</h3>
                                         <p>Chủ đầu tư: <a href="">TNR Holdings Việt Nam</a></p>
-                                        <p> Địa chỉ: Đường 3, Phường Đề Thám, TP. Cao Bằng, Cao Bằng</p>
+                                        <p class="text-secondary"> Địa chỉ: Đường 3, Phường Đề Thám, TP. Cao Bằng, Cao Bằng</p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -228,29 +286,29 @@
                 </div>
                 <div class="carousel-item">
                     <div class="row">
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class=" col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="images.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2 d-md-block d-none ">
+                                    <div class="text-info">
                                         <h3>Malibu Hội An </h3>
                                         <p>Chủ đầu tư: <a href=""> Công ty CP Bamboo Capital</a></p>
-                                        <p> Địa chỉ: Đường Trường Sa, thuộc bãi biển Hà My, Hội An, Quảng Nam</p>
+                                        <p class="text-secondary"> Địa chỉ: Đường Trường Sa, thuộc bãi biển Hà My, Hội An, Quảng Nam</p>
                                     </div>
                                 </div>
-                                <div class="box m-0 ">
-                                    <button class="btn btn-primary">Xem chi tiết</button>
+                                <div class="box m-0">
+                                    <button class="btn btn-primary d-md-block d-inline">Xem chi tiết</button>
                                 </div>
                             </div> 
                         </div>
-                       <div class="col-md mb-3 mb-md-0">
+                       <div class="d-md-block d-none col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="kn-paradise-cam-ranh-3-960x720.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2 d-md-block d-none ">
+                                    <div class="text-info">
                                         <h3> InterContinental Phú Quốc</h3>
                                         <p>Chủ đầu tư: <a href="">BIM Group</a></p>
-                                        <p> Địa chỉ: Đường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</p>
+                                        <p class="text-secondary"> Địa chỉ: Đường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -258,14 +316,14 @@
                                 </div>
                             </div> 
                         </div>
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class="d-md-block d-none col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="d2cabc4189996ec73788-960x720.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2  d-md-block d-none">
+                                    <div class="text-info">
                                         <h3> Seamall Bình Châu</h3>
                                         <p>Dơn vị phát triển:<a href="">Trường Phát Investment</a></p>
-                                        <p> Địa chỉ: Quốc lộ 55, xã Bình Châu, huyện Xuyên Mộc, Bà Rịa - Vũng Tàu</p>
+                                        <p class="text-secondary"> Địa chỉ: Quốc lộ 55, xã Bình Châu, huyện Xuyên Mộc, Bà Rịa - Vũng Tàu</p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -277,14 +335,14 @@
                 </div>
                 <div class="carousel-item">
                     <div class="row">
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class=" col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="41319316_2427110984189297_7805852032526450688_o-960x720.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
-                                        <h3>Manhattan Tower Lê Văn Lương</h3>
-                                        <p>Chủ đầu tư: <a href="">Tổng công ty Thành An và đối tác đầu tư Công ty CP Tư vấn Đầu tư Xây dựng Ba Đình</a></p>
-                                        <p> Địa chỉ: Đường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</p>
+                                 <div class="box2 d-md-block d-none ">
+                                    <div class="text-info">
+                                        <h3>Manhattan Lê Văn Lương</h3>
+                                        <p>Chủ đầu tư: <a href="">Tổng công ty Thành An</a></p>
+                                        <p class="text-secondary"> Địa chỉ: Đường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -292,14 +350,14 @@
                                 </div>
                             </div> 
                         </div>
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class="d-md-block d-none  col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="Untitled-1-960x675.jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2 d-md-block d-none ">
+                                    <div class="text-info">
                                         <h3>Vũng Tàu Regency</h3>
-                                        <p>Chủ đầu t và phân phối: <a href=""> Công ty TNHH All Green Vượng Thành - Trùng Dương</a></p>
-                                        <p> Địa chỉ: 3 tháng 2, phường 10, TP. Vũng Tàu, tỉnh Bà Rịa - Vũng TàuĐường Vòng Lâm Viên Đà Lạt, phường 8, TP. Đà Lạt, tỉnh Lâm Đồng</p>
+                                        <p>Chủ đầu tư: <a href=""> Công ty All Green Vượng Thành</a></p>
+                                        <p class="text-secondary"> Địa chỉ: 3 tháng 2, phường 10, TP. Vũng Tàu, tỉnh Bà Rịa - Vũng Tàu</p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -307,14 +365,14 @@
                                 </div>
                             </div> 
                         </div>
-                        <div class="col-md mb-3 mb-md-0">
+                        <div class="d-md-block d-none col-md-4 mb-3 mb-md-0">
                             <div class="text-center position-relative">
                                 <img class="imgfluid" src="nha-lien-ke-va-biet-thu-song-lap-1574139590.22 (1).jpg" alt="">
-                                 <div class="box2 ">
-                                    <div>
+                                 <div class="box2 d-md-block d-none ">
+                                    <div class="text-info">
                                         <h3>Oyster Gành Hào</h3>
-                                        <p>Chủ đầu tư & nhà phân phối: <a href="">Công ty CP Tập đoàn Vietpearl </a></p>
-                                        <p> Địa chỉ: 82 Trần Phú, phường 5, Thành Phố Vũng Tàu</p>
+                                        <p>Chủ đầu tư: <a href="">Công ty CP Tập đoàn Vietpearl </a></p>
+                                        <p class="text-secondary"> Địa chỉ: 82 Trần Phú, phường 5, Thành Phố Vũng Tàu</p>
                                     </div>
                                 </div>
                                 <div class="box m-0 ">
@@ -334,92 +392,514 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
-    <div class="container-fluid mt-5 bg-light">
-        <div class="row">
-            <div class="col-3">
-                <h3>Địa điểm</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-action">Tỉnh/TP
-                        <select name="" id="">
-                            <option value="">Hà Nội</option>
-                            <option value="">Đà Nẵng</option>
-                            <option value="">Cao bằng</option>
-                            <option value="">Hải Phòng</option>
-                            <option value="">Cần Thơ</option>
-                            <option value="">Nha Trang</option>
-                            <option value="">Bà Rịa-Vũng Tàu</option>
-                            <option value="">Huế</option>
-                            <option value="">Thanh Hóa</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item list-group-item-action">Quận/Huyện
-                        <select name="" id="">
-                            <option value="">Hoàn Kiếm</option>
-                            <option value="">Đà Nẵng</option>
-                            <option value="">Cao bằng</option>
-                            <option value="">Hải Phòng</option>
-                            <option value="">Cần Thơ</option>
-                            <option value="">Nha Trang</option>
-                            <option value="">Bà Rịa-Vũng Tàu</option>
-                            <option value="">Huế</option>
-                            <option value="">Thanh Hóa</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item list-group-item-action">Phường/Xã</li>
-                    <li class="list-group-item list-group-item-action">Đường</li>
+        </div>
+        <div class="container-  fluid mt-md-2 bg-white overplay-hidden">
+        <div class="h5 text-center text-white p-1 m-auto bg-danger d-md-block d-none"> TIN NHÀ ĐẤT</div>
+        <div class="row mt-md-4 mt-1">
+            <div class=" d-none d-md-block col-md-3 ">
+                <h3 class="list-name-1">Địa điểm</h3>
+                <ul class="list-group list-group-flush add">
+                    <li class="list-group-item list-group-item-action">Hà Nội <span class="badge badge-primary">2.913</span></li>
+                    <li class="list-group-item list-group-item-action">Đà Nẵng <span class="badge badge-primary">3.142</span></li>
+                    <li class="list-group-item list-group-item-action">Hải Phòng <span class="badge badge-primary">1.123</span></li>
+                    <li class="list-group-item list-group-item-action">Cần Thơ <span class="badge badge-primary">153</span></li>
+                    <li class="list-group-item list-group-item-action">TP Hồ Chí Minh <span class="badge badge-primary">4.243</span></li>
+                    <li class="list-group-item list-group-item-action">Gia Lai <span class="badge badge-primary">565</span></li>
+                    <li class="list-group-item list-group-item-action">Nơi Khác <span class="badge badge-primary">9.878</span></li>
                 </ul>
-                <h3>Diện tích</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                    <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                    <li class="list-group-item list-group-item-action">Morbi leo risus</li>
-                    <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                <h3 class="list-name-2">Diện tích</h3>
+                <ul class="list-group list-group-flush dientich">
+                    <li class="list-group-item list-group-item-action">Nhỏ hơn 100m<sup>2</sup> <span class="badge badge-primary">1.878</span></li>
+                    <li class="list-group-item list-group-item-action">Từ 100m<sup>2</sup> đến 200m<sup>2</sup> <span class="badge badge-primary">3.132</span></li>
+                    <li class="list-group-item list-group-item-action">200m<sup>2</sup> đến 500m<sup>2</sup> <span class="badge badge-primary">2.132</span></li>
+                    <li class="list-group-item list-group-item-action">500m<sup>2</sup> đến 1000m<sup>2</sup> <span class="badge badge-primary">102</span></li>
+                    <li class="list-group-item list-group-item-action">Trên 1000m<sup>2</sup> <span class="badge badge-primary">15</span></li>
                 </ul>
-                <h3>Giá</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                    <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                    <li class="list-group-item list-group-item-action">Morbi leo risus</li>
-                    <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
-                </ul>
-                <h3>Hướng</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                    <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                    <li class="list-group-item list-group-item-action">Morbi leo risus</li>
-                    <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
-                </ul>
-                <h3>Đường trước nhà</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                    <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                    <li class="list-group-item list-group-item-action">Morbi leo risus</li>
-                    <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
-                    <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                <h3 class="list-name-3">Giá</h3>
+                <ul class="list-group list-group-flush price">
+                    <li class="list-group-item list-group-item-action">Dưới 500tr <span class="badge badge-primary">5.422</span></li>
+                    <li class="list-group-item list-group-item-action">Từ 500tr đến 1 tỷ <span class="badge badge-primary">2.643</span></li>
+                    <li class="list-group-item list-group-item-action">Từ 1 tỷ đến 2 tỷ <span class="badge badge-primary">1.425</span></li>
+                    <li class="list-group-item list-group-item-action">Từ 2 tỷ đến 5 tỷ <span class="badge badge-primary">1.213</span></li>
+                    <li class="list-group-item list-group-item-action">Từ 5 tỷ đến 10 tỷ <span class="badge badge-primary">524</span></li>
+                    <li class="list-group-item list-group-item-action">Từ 10 tỷ đến 30 tỷ <span class="badge badge-primary">212</span></li>
+                    <li class="list-group-item list-group-item-action">Trên 30 tỷ <span class="badge badge-primary">84</span></li>
                 </ul>
             </div>
+
+            <div class="col-md-9 pr-md-4">
+                <div class="text-center h6 text-white bg-info rounded py-md-2 py-1">Tin Nhà Bán</div>
+                <div class="row bg-light mb-2 border-bottom border-top rounded">
+                    <div class="col-md-4 col-8 offset-md-0 offset-2 img-box">
+                        <div class="m-1 "><a href="nhadat_muaban.html">
+                            <img  class="nhadat-img" title="click để xem chi tiết" src="./dat1-2.jpg" alt=""></a></div>    
+                            <i class="fas fa-heart h4 p-2 tim" title="yêu thích"></i>
+                            <span class="badge badge-warning img-badge d-md-block d-none">HOT</span>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="nhadat">
+                            <div class="row">
+                            <div class="col-md-10">
+                                <div class="row text-md-left text-center">
+                                    <div class="col mt-1">
+                                        <div>
+                                            <p class=" pl-2 m-0 h5"><a href="nhadat_muaban.html" title="click để xem chi tiết">Bán Nhanh Giá Rẻ Mặt Tiền Đường 5,5m</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-md-block d-none">
+                                    <div class="col">
+                                        <div>
+                                            <p class="ml-2 m-0 py-1 bg-white rounded">Bán nhà vị trí khu TĐC Đất Bông xã Hòa Phong, cách trường THPT Ông Ích Khiêm 100m, trường THCS Trần Quốc Tuấn 150m...<a href="nhadat_muaban.html" title="learn more"><small class="text-success">xem chi tiết</small></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1 text-center text-md-left">
+                                    <div class="col ">
+                                        <div class="pl-2">
+                                            <small class="text-secondary">Đường Võ Nguyên Giáp, Quận Sơn Trà, Thành phố Đà Nẵng</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-6 col-sm-4">
+                                        <div class="bg-white ml-2">
+                                            <span class="text-secondary"><i class="fas fa-ruler text-dark"> </i> 100m<sup>2</sup> </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class="bg-white">
+                                            <span class="text-secondary"><i class="fas fa-bed text-dark"> </i>  2</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class=" bg-white">
+                                            <span class="text-secondary"><i class="fas fa-restroom text-dark"> </i>  3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center my-2">
+                                        <i class="fas fa-phone-alt"></i><span class="d-md-inline d-none"> Liên Hệ Ngay</span>:<a class="text-success" href=""> 090931524</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-0 d-md-block d-none">
+                                    <div class="mt-md-5">
+                                        <p class="h1 text-danger text-center ">10,2 Tỷ</p>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="dropdown-divider border-info m-0"></div>
+                            <div class="row w-100">
+                                <div class="d-md-block d-none col-md-6 pl-2"><i><small>Người đăng: </small></i><a title="đi tới" class="text-primary" href="">Admin</a></div>
+                                <div class="col-md-6 text-right"><small><i>Ngày đăng:</i> 11/11/2019</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-light mb-2 border-bottom border-top rounded">
+                    <div class="col-md-4 col-8 offset-md-0 offset-2 img-box">
+                        <div class="m-1 "><a href="nhadat_muaban2.html">
+                            <img  class="nhadat-img" title="click để xem chi tiết" src="./dat2-3.jpg" alt=""></a></div>    
+                            <i class="fas fa-heart h4 p-2 tim" title="yêu thích"></i>
+                            <span class="badge badge-warning img-badge d-md-block d-none">HOT</span>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="nhadat">
+                            <div class="row">
+                            <div class="col-md-10">
+                                <div class="row text-md-left text-center">
+                                    <div class="col mt-1">
+                                        <div>
+                                            <p class=" pl-2 m-0 h5"><a href="nhadat_muaban2.html" title="click để xem chi tiết">Bán gấp biệt thự sang trọng</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-md-block d-none">
+                                    <div class="col">
+                                        <div>
+                                            <p class="ml-2 m-0 py-1 bg-white rounded">Biệt thự biệt lập, sang trọng , đầy đủ tiện nghi phù hợp cho nghỉ dưỡng, không khi trong lành dễ...<a href="nhadat_muaban2.html" title="learn more"><small class="text-success">xem chi tiết</small></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1 text-center text-md-left">
+                                    <div class="col ">
+                                        <div class="pl-2">
+                                            <small class="text-secondary">Đường Võ Nguyên Giáp, Quận Sơn Trà, Thành phố Đà Nẵng</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-6 col-sm-4">
+                                        <div class="bg-white ml-2">
+                                            <span class="text-secondary"><i class="fas fa-ruler text-dark"> </i> 1000m<sup>2</sup> </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class="bg-white">
+                                            <span class="text-secondary"><i class="fas fa-bed text-dark"> </i>  5</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class=" bg-white">
+                                            <span class="text-secondary"><i class="fas fa-restroom text-dark"> </i>  5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center my-2">
+                                        <i class="fas fa-phone-alt"></i><span class="d-md-inline d-none"> Liên Hệ Ngay</span>:<a class="text-success" href=""> 0213.233.324</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-0 d-md-block d-none">
+                                    <div class="mt-md-5">
+                                        <p class="h1 text-danger text-center ">20 Tỷ</p>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="dropdown-divider border-info m-0"></div>
+                            <div class="row w-100">
+                                <div class="d-md-block d-none col-md-6 pl-2"><i><small>Người đăng: </small></i><a title="đi tới" class="text-primary" href="">Admin</a></div>
+                                <div class="col-md-6 text-right"><small><i>Ngày đăng:</i> 16/11/2019</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center"><a class="text-success" href="list_muaban.html">xem thêm</a></div>
+                <div class="border-bottom mb-3"></div>
+                <div class="text-center h6 text-white bg-info rounded py-md-2 py-1">Tin Cho Thuê</div>
+                <div class="row bg-light mb-2 border-bottom border-top rounded">
+                    <div class="col-md-4 col-8 offset-md-0 offset-2 img-box">
+                        <div class="m-1 "><a href="nhadat_muaban.html">
+                            <img  class="nhadat-img" title="click để xem chi tiết" src="./dat2-2.jpg" alt=""></a></div>    
+                            <i class="fas fa-heart h4 p-2 tim" title="yêu thích"></i>
+                            <span class="badge badge-warning img-badge d-md-block d-none">HOT</span>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="nhadat">
+                            <div class="row">
+                            <div class="col-md-10">
+                                <div class="row text-md-left text-center">
+                                    <div class="col mt-1">
+                                        <div>
+                                            <p class=" pl-2 m-0 h5"><a href="nhadat_muaban.html" title="click để xem chi tiết">Cho thuê nhà nguyên căn vào ở ngay</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-md-block d-none">
+                                    <div class="col">
+                                        <div>
+                                            <p class="ml-2 m-0 py-1 bg-white rounded">Tọa lạc tại trung tâm thành phố, thuận tiện cho gia đình...<a href="nhadat_muaban.html" title="learn more"><small class="text-success">xem chi tiết</small></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1 text-center text-md-left">
+                                    <div class="col ">
+                                        <div class="pl-2">
+                                            <small class="text-secondary">Đường Ngô Tất Tố, Quận 2 , HCM</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-6 col-sm-4">
+                                        <div class="bg-white ml-2">
+                                            <span class="text-secondary"><i class="fas fa-ruler text-dark"> </i> 430m<sup>2</sup> </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class="bg-white">
+                                            <span class="text-secondary"><i class="fas fa-bed text-dark"> </i>  4</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class=" bg-white">
+                                            <span class="text-secondary"><i class="fas fa-restroom text-dark"> </i>  4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center my-2">
+                                        <i class="fas fa-phone-alt"></i><span class="d-md-inline d-none"> Liên Hệ Ngay</span>:<a class="text-success" href=""> 090931524</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-0 d-md-block d-none">
+                                    <div class="mt-md-5">
+                                        <p class="h1 text-danger text-center ">20tr/T</p>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="dropdown-divider border-info m-0"></div>
+                            <div class="row w-100">
+                                <div class="d-md-block d-none col-md-6 pl-2"><i><small>Người đăng: </small></i><a title="đi tới" class="text-primary" href="">Admin</a></div>
+                                <div class="col-md-6 text-right"><small><i>Ngày đăng:</i> 11/11/2019</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-light mb-2 border-bottom border-top rounded">
+                    <div class="col-md-4 col-8 offset-md-0 offset-2 img-box">
+                        <div class="m-1 "><a href="nhadat_muaban2.html">
+                            <img  class="nhadat-img" title="click để xem chi tiết" src="./dat2-1.jpg" alt=""></a></div>    
+                            <i class="fas fa-heart h4 p-2 tim" title="yêu thích"></i>
+                            <span class="badge badge-warning img-badge d-md-block d-none">HOT</span>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="nhadat">
+                            <div class="row">
+                            <div class="col-md-10">
+                                <div class="row text-md-left text-center">
+                                    <div class="col mt-1">
+                                        <div>
+                                            <p class=" pl-2 m-0 h5"><a href="nhadat_muaban2.html" title="click để xem chi tiết">Cho thuê căn hộ sang trọng tại TT Tp</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-md-block d-none">
+                                    <div class="col">
+                                        <div>
+                                            <p class="ml-2 m-0 py-1 bg-white rounded">Sang trọng , thuận tiện cho người đi làm, gần sân bay, trung tâm thương mại...<a href="nhadat_muaban2.html" title="learn more"><small class="text-success">xem chi tiết</small></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1 text-center text-md-left">
+                                    <div class="col ">
+                                        <div class="pl-2">
+                                            <small class="text-secondary">Lối nhỏ, Phố WALL</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-6 col-sm-4">
+                                        <div class="bg-white ml-2">
+                                            <span class="text-secondary"><i class="fas fa-ruler text-dark"> </i> 123m<sup>2</sup> </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class="bg-white">
+                                            <span class="text-secondary"><i class="fas fa-bed text-dark"> </i>  1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-4">
+                                        <div class=" bg-white">
+                                            <span class="text-secondary"><i class="fas fa-restroom text-dark"> </i>  2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center my-2">
+                                        <i class="fas fa-phone-alt"></i><span class="d-md-inline d-none"> Liên Hệ Ngay</span>:<a class="text-success" href=""> 0213.233.324</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 p-0 d-md-block d-none">
+                                    <div class="mt-md-5">
+                                        <p class="h1 text-danger text-center ">8tr/T</p>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="dropdown-divider border-info m-0"></div>
+                            <div class="row w-100">
+                                <div class="d-md-block d-none col-md-6 pl-2"><i><small>Người đăng: </small></i><a title="đi tới" class="text-primary" href="">Admin</a></div>
+                                <div class="col-md-6 text-right"><small><i>Ngày đăng:</i> 16/11/2019</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" text-center"><a class="text-success" href="list_muaban.html">xem thêm</a></div>
+                <div class="border-bottom mb-3"></div>
+                
+            </div>
+        </div>
         </div>
     </div>
-    
-
-
-
-
-
 
     
-    <h1>a</h1>
+
+    <footer class=" w-100 pt-3 mt-2 bg-dark m-0 text-white">
+        <div class="container row m-auto border-bottom border-light py-0">
+            <div class="col-md-3 p-0 col-6">
+                <div class="h3 text-info">About</div>
+                <ul style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Giới thiệu</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Báo chí nói gì</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Tuyển dụng</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Quy chế hoạt động</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Bảo mật thông tin</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Góp ý</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Trợ giúp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 p-0 col-6">
+                <div class="h3 text-info">Services</div>
+                <ul style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Hướng dẫn đăng ký</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Kích hoạt tài khoản</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Hướng dẫn đăng tin</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Phản ánh thành viên</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="h3 text-info d-md-block d-none">Tiện ích và hỗ trợ</div>
+                <ul class=" d-md-block d-none" style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Bảng giá hoạt động</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Các hình thức nạp tiền</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Công cụ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 p-0">
+                <div class="h3 text-info  text-md-left text-center">Kết nối với chúng tôi</div>
+                <p class="text-center">
+                    <a href=""> <img  src="./facebook.png" alt=""></a>
+                    <a href=""> <img src="./twitter.png" alt=""></a>
+                    <a href=""> <img src="./youtube.png" alt=""></a>
+                    <a href=""> <img src="./linkedin.png" alt=""></a>
+                </p>
+                <div class="h3 text-info pt-3 p-0 m-0 text-md-left text-center">Phiên bản</div>
+                <p class="text-center">
+                    <a style="align-items:center" href=""><img width="60%" src="./IMGBIN_iphone-google-play-app-store-apple-png_e08Wkd19.png" alt=""></a>
+                </p>
+            </div>
+        </div>
+        <div class="text-info p-2 pb-md-4">
+            <div class="4 text-center py-md-3 py-2">TẬP ĐOÀN VÔ GIA CƯ</div>
+            <div class="h6 text-center d-md-block d-none">Khu phố 4, Phường Hắc Dịch, Thị xã Phú Mỹ, Tỉnh Bà Rịa Vũng Tàu.</div>
+            <div class="h6 text-center">Địện thoại: (0254) 3890 425 | Email: contact@alonhadat.com.vn</div>
+            <div class="h6 text-center">® Tôi giữ bản quyền website này. <span class="d-md-block d-none">Việc sao chép một phần hoặc toàn bộ mà không được sử đồng ý bằng văn bản là vi phạm pháp luật.</span> </div>
+        </div>
+        
+    </footer>
+
+
+
+    
+
+    <script src="jquery-3.4.1.js"></script>
     <script>
+        
         var modal = document.getElementById('login');
         window.onclick = function(event) {
             if (event.target == modal) {
             modal.style.display = "none";
             }
         }
+        $(document).ready(function(){
+            $(".list-name-1").click(function(){
+                $(".add").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $(".list-name-2").click(function(){
+                $(".dientich").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $(".list-name-3").click(function(){
+                $(".price").slideToggle("slow");
+            });
+        });
+
+        // rps menu 
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        // list menu
+        $(document).ready(function(){
+            $(".menu-btn-buy").click(function(){
+                $(".menu-list-buy").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-lease").click(function(){
+                $(".menu-list-lease").slideToggle("fast");
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-project").click(function(){
+                $(".menu-list-project").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-new").click(function(){
+                $(".menu-list-new").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-help").click(function(){
+                $(".menu-list-help").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-buy").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-login").click(function(){
+                document.getElementById("mySidenav").style.width = "0";
+            })
+        });
+
+
+
+
+        var listUser=[
+            {
+                name:"1",
+                pass:"a",
+            },{
+                name:"2",
+                pass:"b",
+            }
+        ]
+        $(document).ready(function(){
+            $('#login-btn').click(function(){
+                var user = $('#user').val();
+                var pass = $('#pass').val();
+                var check=false;
+                for( var i=0; i < listUser.length; i++){
+                    if(listUser[i].name == user && listUser[i].pass == pass){
+                        check=true;
+                    }
+                }
+                if(check==true){
+                    alert("Đăng nhập thành công");
+                    modal.style.display = "none";
+                    $('.login-user').html(+user);
+                    $('.login-disabled').addClass('disabled');
+
+                }else{
+                    alert("Tên đăng nhập hoặc mật khẩu không đúng")
+                }
+            });
+            $('.logout-user').click(function(){
+                $('.login-user').html("<i class='fas fa-user'></i> Sign In");
+                $('.login-disabled').removeClass('disabled');
+            })
+        })
     </script>
 </body>
 </html>

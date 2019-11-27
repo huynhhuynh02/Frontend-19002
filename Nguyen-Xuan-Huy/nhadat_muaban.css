@@ -23,16 +23,8 @@ body{
     color: rgb(0, 0, 0) !important;
 }
 
-.carousel-control-prev, .carousel-control-next{
-    z-index: 0 !important;
-}
-.tit{
-    font-weight: bolder;
-    color: rgb(53, 53, 206) !important;
-}
 
-
- /* silidenav */
+/* silidenav */
 .sidenav {
     height: 100%;
     width: 0;
@@ -45,7 +37,7 @@ body{
     transition: 0.5s;
     padding-top: 5px;
 }
-
+  
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -70,7 +62,13 @@ body{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-
+.list-name-1:hover, .list-name-2:hover, .list-name-3:hover{
+    cursor: pointer;
+    color: aqua;
+}
+ .menu-list-buy, .menu-list-lease, .menu-list-project, .menu-list-new, .menu-list-help{
+     display: none;
+ }
 
 
 .dropdown:hover > .dropdown-menu {
@@ -80,7 +78,7 @@ body{
     pointer-events: none;
 }
 
-/* login form */
+
 .modal {
     display: none; 
     position: fixed;
@@ -92,8 +90,7 @@ body{
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-    padding-top: 00px;
-    overflow: hidden;
+    padding-top: 60px;
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -102,7 +99,8 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}  
+}
+  
 .button-login{
     background-color: rgb(76, 246, 209);
     color: white;
@@ -112,37 +110,47 @@ input[type=text], input[type=password] {
     cursor: pointer;
     width: 100%;
 }
+  
 button:hover {
     opacity: 0.8;
-} 
+}
+  
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
     border-radius: 10px;
-} 
+}
+  
+ 
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
+  
 img.avatar {
     width: 20%;
     border-radius: 50%;
-} 
+}
+  
 .container {
     padding: 16px;
-} 
+}
+  
 span.psw {
     float: right;
     padding-top: 16px;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
     width: 50%;
 }
+  
+
 .close {
     position: absolute;
     right: 25px;
@@ -155,7 +163,7 @@ span.psw {
 .close:focus {
     color: red;
     cursor: pointer;
-}
+  }
 .animate {
     animation: animatezoom 0.6s
 } 
@@ -163,10 +171,6 @@ span.psw {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
-
-
-
-
 
 .img-box{
     width:300px ;
@@ -287,3 +291,26 @@ img:hover{
  .menu-list-buy, .menu-list-lease, .menu-list-project, .menu-list-new, .menu-list-help{
      display: none;
  }
+.label{
+    font-size: 10px !important;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    background: url("./phpThumb_generated_thumbnail\ \(1\).jpeg") left top no-repeat;
+    margin:-2px 5px 0 0;
+    cursor:pointer;
+    vertical-align:middle;
+}
+input[type="radio"]:checked + label span {
+    background:url("./phpThumb_generated_thumbnail.jpeg") -19px top no-repeat;
+}
+#slide-btn:hover{
+    cursor: pointer;
+    background: rgb(77, 170, 246);
+    color: white !important;
+}

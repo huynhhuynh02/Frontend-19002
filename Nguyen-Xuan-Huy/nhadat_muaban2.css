@@ -287,3 +287,18 @@ img:hover{
  .menu-list-buy, .menu-list-lease, .menu-list-project, .menu-list-new, .menu-list-help{
      display: none;
  }
+ input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    background: url("./phpThumb_generated_thumbnail\ \(1\).jpeg") left top no-repeat;
+    margin:-2px 5px 0 0;
+    cursor:pointer;
+    vertical-align:middle;
+}
+input[type="radio"]:checked + label span {
+    background:url("./phpThumb_generated_thumbnail.jpeg") -19px top no-repeat;
+}
