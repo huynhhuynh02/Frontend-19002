@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="shortcut icon" type="image/png" href="houses.png"/>
+    <title>Đăng kí</title>
+    <style>
+       body{
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif !important;
+}
+.navbar{
+    background: rgba(0, 0, 0, 0.8);
+}
+.trangchu{
+    font-weight: bolder;
+    color: tomato !important;
+}
+.trangchu i{
+    color: white;
+}
+.trangchu:hover{
+        color: rgb(248, 167, 167) !important;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    z-index: 0 !important;
+}
+.tit{
+    font-weight: bolder;
+    color: rgb(53, 53, 206) !important;
+}
+
+
+ /* silidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1111111;
+    top: 0;
+    left: 0;
+    background-color: rgb(24, 23, 23);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #b3b2b2;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: -22px;
+    right: 5px;
+    font-size: 50px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}
+
+/* login form */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 00px;
+    overflow: hidden;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}  
+.button-login{
+    background-color: rgb(76, 246, 209);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+} 
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border-radius: 10px;
+} 
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+} 
+.container {
+    padding: 16px;
+} 
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 50%;
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+} 
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    animation: animatezoom 0.6s
+} 
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+
+
+
+.img-box{
+    width:300px ;
+}
+@media screen and (max-width:992px){
+    .img-box{
+        width: 200px;
+    }
+    .nhadat{
+        font-size: 16px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+    .navbar{
+        background: rgb(19, 19, 19);
+    }
+    .modal-content{
+        width: 80%;
+    }
+    .img-box{
+        width: 160px;
+    }
+}
+@media screen and(max-width:567px){
+
+}
+.carousel-indicators li{
+    height: 5px;
+}
+.imgfluid{
+    width: 100%;
+    opacity: 1;
+}
+
+.box2{
+    width:100%;
+    height: 100%;
+    background:none;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.box2 div{
+    position: sticky;
+    top:60%;
+    background-color: rgba(241, 240, 241, 0.6);
+    font-weight: bolder;
+    padding: 10px 5px;
+}
+.box2 div p{
+    color: rgb(32, 8, 8);
+    text-shadow: none;
+}
+.box2 div p a:hover{
+    text-decoration: underline;
+}
+.box{
+    width:100%;
+    height: 100%;
+    background: rgba(81, 81, 82, 0.3);
+    opacity: 0;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    transition:all .3s ease;
+  
+}
+.box button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.box:hover{
+    opacity: 1;
+}
+.box:hover > .imgfluid{
+    overflow: hidden;
+}
+.img-box{
+    position: relative;
+}
+
+.nhadat-img{
+    width: 100%;
+}
+.img-badge{
+    position: absolute;
+    left: 20px;
+    top:10px;
+    padding: 8px 14px;
+}
+img:hover{
+    transform: scale(1.01);
+}
+.tim{
+    color: rgb(255, 27, 27);
+    position:absolute ;
+    top: 5px;
+    right: 15px;
+}
+.tim:hover , .img-badge:hover{
+    transform: scale(1.1);
+    opacity: .9;
+}
+.list-name-1:hover, .list-name-2:hover, .list-name-3:hover{
+    cursor: pointer;
+    color: aqua;
+}
+ .menu-list-buy, .menu-list-lease, .menu-list-project, .menu-list-new, .menu-list-help{
+     display: none;
+ }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar p-0 py-1 fixed-top navbar-expand-lg navbar-dark  ">
+        <a class="trangchu navbar-brand pl-md-2" href="nhatdat_trangchu.html" title="Home"><i class="fas fa-home"></i>  Trang chủ</a>
+        <button class="navbar-toggler" type="button"  onclick="openNav()" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-3">
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Mua bán" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mua bán
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-home  dropdown-icon"></i> Nhà</a>
+                <a class="dropdown-item " href="list_muaban.html">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Nhà nguyên căn</a>
+                <a class="dropdown-item" href="list_muaban.html">Biệt thự</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="far fa-building dropdown-icon"></i> Căn Hộ & Chung Cư</a>
+                <a class="dropdown-item" href="list_muaban.html">Căn hộ cao cấp <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i> Đất</a>
+                <a class="dropdown-item" href="list_muaban.html">Đất thổ cư <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Đất nề dự án</a>
+                <a class="dropdown-item" href="list_muaban.html">Đất nông nghiệp</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-anchor dropdown-icon"></i> Mặt Bằng</a>
+                <a class="dropdown-item" href="list_muaban.html">Cửa hàng</a>
+                <a class="dropdown-item" href="list_muaban.html">Văn Phòng <span class="badge badge-primary">Sale</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Cho thuê" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cho thuê
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-home  dropdown-icon"></i> Nhà</a>
+                <a class="dropdown-item " href="list_muaban.html">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Nhà nguyên căn <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Biệt thự</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="far fa-building dropdown-icon"></i> Căn Hộ & Chung Cư</a>
+                <a class="dropdown-item" href="list_muaban.html">Căn hộ cao cấp</a>
+                <a class="dropdown-item" href="list_muaban.html">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i>Phòng trọ</a>
+                <a class="dropdown-item" href="list_muaban.html">Phòng trọ giá rẻ</a>
+                <a class="dropdown-item" href="list_muaban.html">Phòng trọ sinh viên<span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Phòng trọ cao cấp</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-anchor dropdown-icon"></i> Mặt Bằng</a>
+                <a class="dropdown-item" href="list_muaban.html">Cửa hàng <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Văn Phòng</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Dự án" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dự án
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="list_muaban.html">Khu căn hộ chung cư <span class="badge badge-warning">New</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu phức hợp <span class="badge badge-danger">Hot</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu dân cư <span class="badge badge-primary">Sale</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu đô thị<span class="badge badge-warning">New</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu  du lịch & nghỉ dưỡng<span class="badge badge-warning"></span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu du lịch dịch vụ</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu công nghiệp <span class="badge badge-warning">New</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="list_muaban.html">Khu cao ốc văn phòng <span class="badge badge-warning">New</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Tin tức" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tin tức
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="list_muaban.html">Thị trường nhà đất <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Sự kiện doanh nghiệp <span class="badge badge-danger">Hot</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit" href="#">Phong thủy <span class="badge badge-warning">New</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" title="Trợ giúp" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Trợ giúp
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="list_muaban.html">Kinh nghiệm mua <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="list_muaban.html">Kinh nghiệm bán <span class="badge badge-danger">Hot</span></a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 w-sm-auto" style="width: 350px;" type="search" placeholder="Tìm kiếm nhanh" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="button" title="Tìm kiếm"><a href="list_muaban.html">Search</a></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right ml-md-5">
+            <li class="nav-item  text-center" title="Đăng Nhập" onclick="document.getElementById('login').style.display='block'"><a class="nav-link badge badge-dark p-3 ml-md-3" href="#" style="color:white"><i class="fas fa-user"></i> Sign In</a></li>
+            <li class="nav-item text-center" title="Đăng xuất" ><a class="nav-link badge badge-dark p-3 ml-md-2" href="#" style="color:white"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+            <div class="h3 text-white text-center "><i class="fas fa-home"></i> Trang chủ</div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-buy">Mua bán</button>
+            <div class="list-group menu-list-buy">
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-home  dropdown-icon"></i> Nhà <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="far fa-building dropdown-icon"></i> Căn hộ & chung cư <span class="badge badge-danger">Hot</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-globe-asia dropdown-icon"></i> Đất <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-anchor dropdown-icon"></i>Mặt bằng <span class="badge badge-primary">Sale</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-lease">Cho thuê</button>
+            <div class="list-group menu-list-lease">
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-home  dropdown-icon"></i> Nhà <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="far fa-building dropdown-icon"></i> Căn hộ & chung cư</button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-globe-asia dropdown-icon"></i> Phòng trọ <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-anchor dropdown-icon"></i>Mặt bằng <span class="badge badge-primary">Sale</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-project">Thông tin dự án</button>
+            <div class="list-group menu-list-project">
+                <button type="button" class="list-group-item list-group-item-action"> Khu đô thị <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu chung cư</button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu dân cư <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu phức hợp </button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu du lịch dịch vụ </button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu du lịch nghỉ dưỡng <span class="badge badge-primary">Sale</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu cao ốc văn phòng </button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-new">Tin tức thị trường</button>
+            <div class="list-group menu-list-new">
+                <button type="button" class="list-group-item list-group-item-action"> Thị trường nhà đất <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Sự kiện doanh nghiệp</button>
+                <button type="button" class="list-group-item list-group-item-action"> Quy định - Chính sách <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Phong thủy <span class="badge badge-danger">Hot</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-help">Trợ giúp</button>
+            <div class="list-group menu-list-help">
+                <button type="button" class="list-group-item list-group-item-action"> Luật <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Kinh nghiệm mua bán</button>
+                <button type="button" class="list-group-item list-group-item-action"> Quy định - Chính sách <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Kinh nghiệm tìm kiếm <span class="badge badge-danger">Hot</span></button>
+            </div> 
+            <input class="mt-5" type="text" name="search" id="" placeholder="Tìm kiếm">
+            <div class="text-center"><button type="submit" class="btn btn-info">Tìm Kiếm</button></div>   
+            <div class="row mt-5">
+                <div class="col text-center"><div><button class="btn btn-dark py-2 menu-login" onclick="document.getElementById('login').style.display='block'" style="width:100%"><i class="fas fa-user"></i> Login</button></div></div>
+                <div class="col textcenter"><div><button class="btn btn-dark py-2 " style="width:100%"><i class="fas fa-sign-out-alt"></i> Logout</button></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="login" class="modal">
+        <div class="modal-content animate" action="#" method="post"></form>
+            <div class="imgcontainer">
+            <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+            <label for="uname"><b>Tên đăng nhập</b></label>
+            <input type="text" placeholder="Nhập tên đăng nhập" id="user" name="uname" required>
+        
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Mật khẩu" id="pass" name="psw" required>
+                
+            <button class="button-login" id="login-btn" type="button">Đăng nhập</button>
+            <button class="button-login" style="background-color: rebeccapurple !important;" id="register-btn" type="button"><a href="register.html" style="text-decoration:none; color:white">Đăng kí</a></button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+            </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Quên <a href="#"> mật khẩu</a> ?</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form class="mt-5 pt-3">
+                    <div class="container">
+                        <label for="uname" class="pl-2 text-info "><b>Tên đăng nhập</b></label>
+                        <input type="text" placeholder="Nhập tên đăng nhập"  name="uname" class="user-r" required>
+                
+                        <label for="psw" class="pl-2 text-info"><b>Mật khẩu</b></label>
+                        <input type="password" placeholder="Mật khẩu"  name="psw" class="pass-r" required>
+                        <label for="psw" class="pl-2 text-info"><b> Nhập lại Mật khẩu</b></label>
+                        <input type="password" placeholder="Nhập lại mật khẩu"  name="psw" class="pass-r-r" required>
+                        <label for="mail"  class="pl-2 text-info"><b> Nhập email</b></label>
+                        <input type="email" placeholder="email"  class="p-2 w-100" name="mail" required>
+                        <button class="button-login register-btn" style="background-color: rebeccapurple !important;" id="register-btn" type="button">Đăng kí</button>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+
+
+
+
+
+
+ <footer class=" w-100 pt-3 mt-2 bg-dark m-0 text-white">
+        <div class="container row m-auto border-bottom border-light py-0">
+            <div class="col-md-3 p-0 col-6">
+                <div class="h3 text-info">About</div>
+                <ul style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Giới thiệu</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Báo chí nói gì</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Tuyển dụng</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Quy chế hoạt động</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Bảo mật thông tin</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Góp ý</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Trợ giúp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 p-0 col-6">
+                <div class="h3 text-info">Services</div>
+                <ul style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Hướng dẫn đăng ký</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Kích hoạt tài khoản</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Hướng dẫn đăng tin</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Phản ánh thành viên</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="h3 text-info d-md-block d-none">Tiện ích và hỗ trợ</div>
+                <ul class=" d-md-block d-none" style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Bảng giá hoạt động</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Các hình thức nạp tiền</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Công cụ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 p-0">
+                <div class="h3 text-info  text-md-left text-center">Kết nối với chúng tôi</div>
+                <p class="text-center">
+                    <a href=""> <img  src="./facebook.png" alt=""></a>
+                    <a href=""> <img src="./twitter.png" alt=""></a>
+                    <a href=""> <img src="./youtube.png" alt=""></a>
+                    <a href=""> <img src="./linkedin.png" alt=""></a>
+                </p>
+                <div class="h3 text-info pt-3 p-0 m-0 text-md-left text-center">Phiên bản</div>
+                <p class="text-center">
+                    <a style="align-items:center" href=""><img width="60%" src="./IMGBIN_iphone-google-play-app-store-apple-png_e08Wkd19.png" alt=""></a>
+                </p>
+            </div>
+        </div>
+        <div class="text-info p-2 pb-md-4">
+            <div class="4 text-center py-md-3 py-2">TẬP ĐOÀN VÔ GIA CƯ</div>
+            <div class="h6 text-center d-md-block d-none">Khu phố 4, Phường Hắc Dịch, Thị xã Phú Mỹ, Tỉnh Bà Rịa Vũng Tàu.</div>
+            <div class="h6 text-center">Địện thoại: (0254) 3890 425 | Email: contact@alonhadat.com.vn</div>
+            <div class="h6 text-center">® Tôi giữ bản quyền website này. <span class="d-md-block d-none">Việc sao chép một phần hoặc toàn bộ mà không được sử đồng ý bằng văn bản là vi phạm pháp luật.</span> </div>
+        </div>
+        
+    </footer>
+
+
+
+    
+
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        
+        var modal = document.getElementById('login');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        $(document).ready(function(){
+            $(".list-name-1").click(function(){
+                $(".add").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $(".list-name-2").click(function(){
+                $(".dientich").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $(".list-name-3").click(function(){
+                $(".price").slideToggle("slow");
+            });
+        });
+
+        // rps menu 
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        // list menu
+        $(document).ready(function(){
+            $(".menu-btn-buy").click(function(){
+                $(".menu-list-buy").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-lease").click(function(){
+                $(".menu-list-lease").slideToggle("fast");
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-project").click(function(){
+                $(".menu-list-project").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-new").click(function(){
+                $(".menu-list-new").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-help").click(function(){
+                $(".menu-list-help").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-buy").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-login").click(function(){
+                document.getElementById("mySidenav").style.width = "0";
+            })
+        });
+
+        var listUser=[
+            {
+                name:"1",
+                pass:"a",
+            },{
+                name:"2",
+                pass:"b",
+            }
+        ]
+            // login 
+        $(document).ready(function(){
+            $('#login-btn').click(function(){
+                var user = $('#user').val();
+                var pass = $('#pass').val();
+                var check=false;
+                for( var i=0; i < listUser.length; i++){
+                    if(listUser[i].name == user && listUser[i].pass == pass){
+                        check=true;
+                    }
+                }
+                if(check==true){
+                    alert("Đăng nhập thành công");
+                    modal.style.display = "none";
+                }else{
+                    alert("Tên đăng nhập hoặc mật khẩu không đúng")
+                }
+            })
+        })
+        // register
+        $(document).ready(function(){
+            $('.register-btn').click(function(){
+                 var userR =  $('.user-r').val();
+                 var passR =  $('.pass-r').val();
+                 var passRR = $('.pass-r-r').val();
+                 var check2= true
+                 for(var i=0; i< listUser.length; i++){
+                    if(userR == listUser[i].name){
+                        check2=false;
+                    }
+                };
+                if(check2==false){
+                    alert("Tên đăng nhập này đã đc dùng")
+                }else{
+                    if(passR!= passRR){
+                        alert("Mật kaaur không khớp")
+                    }else{
+                        alert("đăng kí thành công");
+                        var newUser={
+                            name:userR,
+                            pass:passR,
+                            }
+                        listUser.push(newUser);
+                        console.log(listUser)   
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>

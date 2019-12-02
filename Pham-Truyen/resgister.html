@@ -50,7 +50,7 @@
         <div class="row rounded mx-auto d-block"
             style="background-image: linear-gradient(#a30505, #eb0814);width: 350px;height: 400px;padding: 20px;">
             <div class="col-md-12">
-                <form class="user-info-form" action="#" method="POST" onsubmit="return validation();">
+                <form id="myForm" class="user-info-form" action="#" method="POST" onsubmit="validation();">
                     <p id="error"></p>
                     <div class="form-group">
                         <label for="inputUsername4" style="color: white;">Tên đăng nhập</label>
@@ -69,7 +69,7 @@
                     </div>
                     <p id="errorpwchar"></p>
                     <div class="form-group">
-                        <button type="submit"
+                        <button id="submit" type="button"
                             style="border: none;width: 100%;padding: 10px;background: rgb(80, 11, 11);border-radius: 5px;color: white;">
                             Đăng ký
                         </button>
@@ -90,7 +90,11 @@
             </div>
         </div>
     </div>
+    <script src="rapphim.js"></script>
     <script>
+        var listuser = [];
+        var submit = document.getElementById('submit');
+        submit.addEventListener('click',validateForm);
         function removeAlerts() {
             document.getElementById("error").innerHTML = "";
             document.getElementById("erroruser").innerHTML = "";
@@ -101,28 +105,36 @@
 
         function validateForm() {
             removeAlerts();
-
-            var username = document.forms["myForm"]["user"].value;
-            var email = document.forms["myForm"]["email"].value;
-            var pw = document.forms["myForm"]["pass"].value;
-
+            var username = document.getElementById("user").value;
+            var email = document.getElementById("email").value;
+            var pw = document.getElementById("pass").value;
+            var flag =true;
             if (!username && !email && !pw) {
                 document.getElementById("error").innerHTML = "Please input username, email and password";
-                return false;
+                flag=false;
             } else if (username == null || username == "") {
                 document.getElementById("erroruser").innerHTML = "Please input your username";
-                return false;
+                flag=flag;
             } else if (email == null || email == "") {
                 document.getElementById("erroremail").innerHTML = "Please input your email";
-                return false;
+                flag=false;
             } else if (pw == null || pw == "") {
                 document.getElementById("errorpw").innerHTML = "Please input your password";
-                return false;
             } else if (pw.length < 6) {
                 document.getElementById("errorpwchar").innerHTML = "your password should be minimum 6 character";
-                return false;
+                flag=false;
             }
-        }    
+            if(flag){
+                var users = {
+                    username:username,
+                    pass:pw,
+                    email:email
+                }
+                listuser.push(users);
+                window.localStorage.setItem('auth',JSON.stringify(listuser));
+                window.location.href='login.html';
+            }
+        }
     </script>
 </body>
 

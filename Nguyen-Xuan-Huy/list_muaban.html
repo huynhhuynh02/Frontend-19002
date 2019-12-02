@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="list_muaban.css">
+    <link rel="shortcut icon" type="image/png" href="houses.png"/>
+    <title>Trang mua bán nhà đất hàng đầu</title>
+    <title>Document</title>
+</head>
+<body>
+     <nav class="navbar p-0 py-1 fixed-top navbar-expand-lg navbar-dark  ">
+        <a class="trangchu navbar-brand pl-md-2" href="nhatdat_trangchu.html" title="Home"><i class="fas fa-home"></i>  Trang chủ</a>
+        <button class="navbar-toggler" type="button"  onclick="openNav()" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-3">
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Mua bán" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mua bán
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-home  dropdown-icon"></i> Nhà</a>
+                <a class="dropdown-item " href="#">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="#">Nhà nguyên căn</a>
+                <a class="dropdown-item" href="#">Biệt thự</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="far fa-building dropdown-icon"></i> Căn Hộ & Chung Cư</a>
+                <a class="dropdown-item" href="#">Căn hộ cao cấp <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="#">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i> Đất</a>
+                <a class="dropdown-item" href="#">Đất thổ cư <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="#">Đất nề dự án</a>
+                <a class="dropdown-item" href="#">Đất nông nghiệp</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-anchor dropdown-icon"></i> Mặt Bằng</a>
+                <a class="dropdown-item" href="#">Cửa hàng</a>
+                <a class="dropdown-item" href="#">Văn Phòng <span class="badge badge-primary">Sale</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Cho thuê" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cho thuê
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-home  dropdown-icon"></i> Nhà</a>
+                <a class="dropdown-item " href="#">Nhà Mặt Phố <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="#">Nhà nguyên căn <span class="badge badge-primary">Sale</span></a>
+                <a class="dropdown-item" href="#">Biệt thự</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="far fa-building dropdown-icon"></i> Căn Hộ & Chung Cư</a>
+                <a class="dropdown-item" href="#">Căn hộ cao cấp</a>
+                <a class="dropdown-item" href="#">Chung cư giá rẻ <span class="badge badge-primary">Sale</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-globe-asia dropdown-icon"></i>Phòng trọ</a>
+                <a class="dropdown-item" href="#">Phòng trọ giá rẻ</a>
+                <a class="dropdown-item" href="#">Phòng trọ sinh viên<span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="#">Phòng trọ cao cấp</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit disabled" href="#"><i class="fas fa-anchor dropdown-icon"></i> Mặt Bằng</a>
+                <a class="dropdown-item" href="#">Cửa hàng <span class="badge badge-warning">New</span></a>
+                <a class="dropdown-item" href="#">Văn Phòng</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Dự án" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dự án
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Khu căn hộ chung cư <span class="badge badge-warning">New</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu phức hợp <span class="badge badge-danger">Hot</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu dân cư <span class="badge badge-primary">Sale</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu đô thị<span class="badge badge-warning">New</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu  du lịch & nghỉ dưỡng<span class="badge badge-warning"></span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu du lịch dịch vụ</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu công nghiệp <span class="badge badge-warning">New</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Khu cao ốc văn phòng <span class="badge badge-warning">New</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" title="Tin tức" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tin tức
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Thị trường nhà đất <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="#">Sự kiện doanh nghiệp <span class="badge badge-danger">Hot</span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item tit" href="#">Phong thủy <span class="badge badge-warning">New</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" title="Trợ giúp" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Trợ giúp
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Kinh nghiệm mua <span class="badge badge-danger">Hot</span></a>
+                <a class="dropdown-item" href="#">Kinh nghiệm bán <span class="badge badge-danger">Hot</span></a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 w-sm-auto" style="width: 350px;" type="search" placeholder="Tìm kiếm nhanh" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" title="Tìm kiếm">Search</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right ml-md-5">
+            <li class="nav-item  text-center" title="Đăng Nhập" onclick="document.getElementById('login').style.display='block'"><a class="nav-link badge badge-dark p-3 ml-md-3" href="#" style="color:white"><i class="fas fa-user"></i> Sign In</a></li>
+            <li class="nav-item text-center" title="Đăng xuất" ><a class="nav-link badge badge-dark p-3 ml-md-2" href="#" style="color:white"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+            <div class="h3 text-white text-center "><i class="fas fa-home"></i> Trang chủ</div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-buy">Mua bán</button>
+            <div class="list-group menu-list-buy">
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-home  dropdown-icon"></i> Nhà <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="far fa-building dropdown-icon"></i> Căn hộ & chung cư <span class="badge badge-danger">Hot</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-globe-asia dropdown-icon"></i> Đất <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-anchor dropdown-icon"></i>Mặt bằng <span class="badge badge-primary">Sale</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-lease">Cho thuê</button>
+            <div class="list-group menu-list-lease">
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-home  dropdown-icon"></i> Nhà <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="far fa-building dropdown-icon"></i> Căn hộ & chung cư</button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-globe-asia dropdown-icon"></i> Phòng trọ <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"><i class="fas fa-anchor dropdown-icon"></i>Mặt bằng <span class="badge badge-primary">Sale</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-project">Thông tin dự án</button>
+            <div class="list-group menu-list-project">
+                <button type="button" class="list-group-item list-group-item-action"> Khu đô thị <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu chung cư</button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu dân cư <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu phức hợp </button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu du lịch dịch vụ </button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu du lịch nghỉ dưỡng <span class="badge badge-primary">Sale</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Khu cao ốc văn phòng </button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-new">Tin tức thị trường</button>
+            <div class="list-group menu-list-new">
+                <button type="button" class="list-group-item list-group-item-action"> Thị trường nhà đất <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Sự kiện doanh nghiệp</button>
+                <button type="button" class="list-group-item list-group-item-action"> Quy định - Chính sách <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Phong thủy <span class="badge badge-danger">Hot</span></button>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action bg-info menu-btn-help">Trợ giúp</button>
+            <div class="list-group menu-list-help">
+                <button type="button" class="list-group-item list-group-item-action"> Luật <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Kinh nghiệm mua bán</button>
+                <button type="button" class="list-group-item list-group-item-action"> Quy định - Chính sách <span class="badge badge-warning">New</span></button>
+                <button type="button" class="list-group-item list-group-item-action"> Kinh nghiệm tìm kiếm <span class="badge badge-danger">Hot</span></button>
+            </div> 
+            <input class="mt-5" type="text" name="search" id="" placeholder="Tìm kiếm">
+            <div class="text-center"><button type="submit" class="btn btn-info">Tìm Kiếm</button></div>   
+            <div class="row mt-5">
+                <div class="col text-center"><div><button class="btn btn-dark py-2 menu-login" onclick="document.getElementById('login').style.display='block'" style="width:100%"><i class="fas fa-user"></i> Login</button></div></div>
+                <div class="col textcenter"><div><button class="btn btn-dark py-2 " style="width:100%"><i class="fas fa-sign-out-alt"></i> Logout</button></div></div>
+            </div>
+        </div>
+    </div>
+    <div id="login" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+            <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+            <label for="uname"><b>Tên đăng nhập</b></label>
+            <input type="text" placeholder="Nhập tên đăng nhập" name="uname" required>
+        
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Mật khẩu" name="psw" required>
+                
+            <button class="button-login"  type="submit">Đăng nhập</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+            </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Quên <a href="#"> mật khẩu</a> ?</span>
+            </div>
+        </form>
+    </div>
+    <div class="container bg-light" style="margin-top: 65px;">
+        <div class="row mb-md-3">
+          <div class="container-fluid navbar-list mt-2">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb m-0 py-md-2 py-1">
+                <li class="breadcrumb-item"><a href="nhatdat_trangchu.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="#">Mua bán</a></li>
+                <li class="breadcrumb-item"><a href="#">Đất</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Đà Nẵng</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col">
+                        <label for="tinh-thanh" class="text-secondary pr-2"> Tỉnh/ Thành Phố</label>
+                        <select name="tinh-thanh" id="tinh-thanh" class="p-1 text-info">
+                            <option value="dana" selected>Đà Nẵng</option>
+                            <option  value="hanoi">Hà Nội</option>
+                            <option  value="hcm">Hồ Chí Minh</option>
+                        </select>
+
+                        <label for="" class="text-secondary px-2">Loại</label>
+                        <select name="loai" id="loai" class="p-1 text-info">
+                            <option value="chungcu" selected>Chung Cư</option>
+                            <option value="bietthu" s>Biệt Thự</option>
+                            <option  value="dat">Đất</option>
+                        </select>
+
+                        <label for="gia" class="text-secondary px-2"> Giá</label>
+                        <select name="gia" id="gia" class="p-1 text-info">
+                            <option value="ty-1">Dưới 2 Tỷ</option>
+                            <option value="ty-2">2Tỷ > 10Tỷ</option>
+                            <option value="ty-3"> Trên 10 tỷ</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary px-5 filter">  Lọc </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 p-3 filter-item    tin-1 ">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat1-1.png" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Biệt thự biệt lập vùng ngoại thành</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Biệt thự chính chủ, nằm vùng ngoại ô thành phố, giao thông... </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger">9 Tỷ <span class="badge badge-sm badge-primary" style="font-size: 12px;">Sale</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-2 ">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat1-2.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Bán căn hộ chung cư khu trung tâm</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Chung cư mới xây, đồ dùng đầy đủ, vào ở ngay được... </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger">1Tỷ 500tr <span class="badge badge-sm badge-danger" style="font-size: 12px;">New</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-3">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat2-1.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Biệt thự nội thành cần bán gấp</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Cần gấp tiền bán gấp biệt thự trung tâm Tp... </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 11 Tỷ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-4">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat2-2.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Đất khu sắp qui hoạch Hồ Chí Minh</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Đất khu vực sắp qui hoạch 11tr/m<sup>2</sup></div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 3Tỷ 300tr</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-5">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat2-3.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Đất TT TP.HCM cần bán gấp</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center "> Chính chủ đầy đủ giấy tờ, ưu tiên người thiện chí.</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 30Tỷ 500tr</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-6 ">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat1-1.png" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Chung cư tại Thành Phố Hồ Chí Minh</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">đầy đủ tiện nghi, thoáng mát, giấy tờ đầy đủ </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 850Tr <span class="badge badge-sm badge-primary" style="font-size: 12px;">Sale</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-7 ">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat1-2.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Đất nông thôn tại Đà Nẵng</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Đất thổ cư cần bán gấp trong tháng 12...</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger">1Tỷ 200tr <span class="badge badge-sm badge-danger" style="font-size: 12px;">New</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-8">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat2-1.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Căn hộ chung cư Hà Nội</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Cần gấp tiền bán gấp biệt thự trung tâm Tp... </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 2 Tỷ 1</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-9">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat2-2.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Căn hộ chung cư Đà Nẵng</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center ">Thoáng mái tiện nghi, phù hợp với công nhân viên chức</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 3Tỷ 300tr</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+            <div class="col-md-3 p-3 filter-item    tin-10">
+                <div class="border p-1">
+                    <a href="" style="text-decoration: none;" title="Nhấn để xem thông tin chi tiết">
+                        <img src="dat2-3.jpg" width="100%" alt="">
+                        <div class="h5 mt-md-2 text-info text-center">Đất qui hoạch tại trung tâm thành phố</div>
+                            <div class="row">
+                               <div class="col text-secondary text-center "> Chính chủ đầy đủ giấy tờ, ưu tiên người thiện chí.</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class=" col">
+                                    <p class="p-0 m-0 mt-1 h5 text-danger"> 30Tỷ 500tr</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+            </div>
+        </div>
+
+
+        <div class="row text-md-right text-center text-info bg-white mt-5 ">
+            <div class="col"><a class="text-info" href="">Xem Thêm >>> </a></div>
+        </div>
+        
+    </div>
+
+
+
+
+
+    <footer class=" w-100 pt-3 mt-2 bg-dark m-0 text-white">
+        <div class="container row m-auto border-bottom border-light py-0">
+            <div class="col-md-3 p-0 col-6">
+                <div class="h3 text-info">About</div>
+                <ul style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Giới thiệu</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Báo chí nói gì</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Tuyển dụng</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Quy chế hoạt động</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Bảo mật thông tin</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Góp ý</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Trợ giúp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 p-0 col-6">
+                <div class="h3 text-info">Services</div>
+                <ul style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Hướng dẫn đăng ký</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Kích hoạt tài khoản</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Hướng dẫn đăng tin</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Phản ánh thành viên</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="h3 text-info d-md-block d-none">Tiện ích và hỗ trợ</div>
+                <ul class=" d-md-block d-none" style=" list-style:none; padding: 0;">
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Bảng giá hoạt động</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Các hình thức nạp tiền</a></li>
+                    <li><a class="text-white" href=""><i class="fas fa-chevron-right text-danger"></i> Công cụ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 p-0">
+                <div class="h3 text-info  text-md-left text-center">Kết nối với chúng tôi</div>
+                <p class="text-center">
+                    <a href=""> <img  src="./facebook.png" alt=""></a>
+                    <a href=""> <img src="./twitter.png" alt=""></a>
+                    <a href=""> <img src="./youtube.png" alt=""></a>
+                    <a href=""> <img src="./linkedin.png" alt=""></a>
+                </p>
+                <div class="h3 text-info pt-3 p-0 m-0 text-md-left text-center">Phiên bản</div>
+                <p class="text-center">
+                    <a style="align-items:center" href=""><img width="60%" src="./IMGBIN_iphone-google-play-app-store-apple-png_e08Wkd19.png" alt=""></a>
+                </p>
+            </div>
+        </div>
+        <div class="text-info p-2 pb-md-4">
+            <div class="4 text-center py-md-3 py-2">TẬP ĐOÀN VÔ GIA CƯ</div>
+            <div class="h6 text-center d-md-block d-none">Khu phố 4, Phường Hắc Dịch, Thị xã Phú Mỹ, Tỉnh Bà Rịa Vũng Tàu.</div>
+            <div class="h6 text-center">Địện thoại: (0254) 3890 425 | Email: contact@alonhadat.com.vn</div>
+            <div class="h6 text-center">® Tôi giữ bản quyền website này. <span class="d-md-block d-none">Việc sao chép một phần hoặc toàn bộ mà không được sử đồng ý bằng văn bản là vi phạm pháp luật.</span> </div>
+        </div>
+        
+    </footer>
+
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        var modal = document.getElementById('login');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        $(document).ready(function(){
+            $(".list-name-1").click(function(){
+                $(".add").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $(".list-name-2").click(function(){
+                $(".dientich").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $(".list-name-3").click(function(){
+                $(".price").slideToggle("slow");
+            });
+        });
+
+        // rps menu 
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        // list menu
+        $(document).ready(function(){
+            $(".menu-btn-buy").click(function(){
+                $(".menu-list-buy").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-lease").click(function(){
+                $(".menu-list-lease").slideToggle("fast");
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-project").click(function(){
+                $(".menu-list-project").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-new").click(function(){
+                $(".menu-list-new").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-buy").slideUp();
+                $(".menu-list-help").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-btn-help").click(function(){
+                $(".menu-list-help").slideToggle("fast");
+                $(".menu-list-lease").slideUp();
+                $(".menu-list-project").slideUp();
+                $(".menu-list-new").slideUp();
+                $(".menu-list-buy").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $(".menu-login").click(function(){
+                document.getElementById("mySidenav").style.width = "0";
+            })
+        })
+    
+
+        var a=[
+            {
+                id:"tin-1",
+                tinh:"dana",
+                loai:"bietthu",
+                gia:"ty-2"
+            },
+            {
+                class:"tin-2",
+                tinh:"hanoi",
+                loai:"chungcu",
+                gia:"ty-1"
+            },
+            {
+                id:"tin-3",
+                tinh:"hcm",
+                loai:"bietthu",
+                gia:"t-3"
+            },
+            {
+                id:"tin-4",
+                tinh:"hcm",
+                loai:"dat",
+                gia:"ty-2"
+            },
+            {
+                id:"tin-5",
+                tinh:"hcm",
+                loai:"dat",
+                gia:"ty-3"
+            },
+            {
+                id:"tin-6",
+                tinh:"hcm",
+                loai:"chungcu",
+                gia:"ty-1"
+            },
+            {
+                id:"tin-7",
+                tinh:"dana",
+                loai:"dat",
+                gia:"ty-1"
+            },
+            {
+                id:"tin-8",
+                tinh:"hanoi",
+                loai:"chungcu",
+                gia:"ty-2"
+            },
+            {
+                id:"tin-9",
+                tinh:"dana",
+                loai:"chungcu",
+                gia:"ty-2"
+            },
+            {
+                id:"tin-10",
+                tinh:"hanoi",
+                loai:"dat",
+                gia:"ty-3"
+            },
+        ]
+        // bộ lọc
+        $(document).ready(function(){
+            $('.filter').click(function(){
+                var tinh = $('#tinh-thanh').val();
+                var loai = $('#loai').val();
+                var price = $('#price').val();
+               $('.filter-item').hide();
+              for( var i = 0; a.length; i++){
+                  if( a[i].tinh == tinh && a[i].loai == loai && a[i].price == price){
+                    $("."+a[i].id).show();
+                  }
+              }
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>
