@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,164 +11,346 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="cart.js"></script>
     <script src="font-awesome/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome/css/all.css">
-    <style>
-        .htchitietbill {
-            display: none;
-            position: absolute;
-            left: 50%;
-            top: 10%;
-            transform: translate(-50%, 0);
-            background: rgb(192, 190, 190);
-            color: rgb(0, 0, 0);
-            width: 350px;
-            height: 400px;
-            padding: 10px;
-        }
-
-        .htchitietbill p {
-            display: inline-block;
-            width: 50%;
-        }
-
-        .httongbill {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-        }
-        .httongbill .httongbill-input{
-            border: none;
-            font-weight: bold;
-            font-size: 23px;
-        }
-        .quanlysp{
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn-banhang btn btn-secondary">Bán Hàng</button>
-        <button type="button" class="btn-trangadmin btn btn-secondary">Admin</button>
-    </div>
-    <div class="trangbanhang">
-        <div class="row p-0 m-0 row-eq-height">
-            <div class="col-md-8 p-0 m-0 border border-primary">
+    <div class="body-form">
+        <div class="form">
+            <div class="form-login">
+                <h1 class="text-primary text-center">Đăng Nhập </h1>
                 <div>
-                    <table style="width:100%">
-                        <tr>
-                            <td class="w-25">Sản phẩm</td>
-                            <td>Số lượng</td>
-                            <td>Giá</td>
-                        </tr>
-                    </table>
+                    <i class="fas fa-phone"></i>
+                    <input class="form-login-phone" placeholder="Số điện thoại" type="number">
                 </div>
-                <div class="donhang">
-                    <table class="donhang-table" style="width:100%">
-
-                    </table>
+                <div>
+                    <i class="fas fa-key"></i>
+                    <input class="form-login-pass" placeholder="Mật khẩu" type="password">
                 </div>
-            </div>
-            <div class="col-md-4 p-0 m-0">
-                <div class="col-md-12 p-0 m-0">
-                    <div class="form-hoadon border border-primary">
-                        <h2 class="text-center text-primary">Thông tin đơn hàng</h2>
-                        <div>
-                            <p class="d-inline-block w-50">ID khách hàng:</p>
-                            <input class="id-khach" type="text" value="Khách lẻ">
-                        </div>
-                        <div>
-                            <p class="d-inline-block w-50">Thành tiền:</p>
-                            <input class="thanhtien" type="text" value="0">
-                        </div>
-                        <div>
-                            <p class="d-inline-block w-50">VAT:</p>
-                            <p class="d-inline-block"> 5%</p>
-                        </div>
-                        <div>
-                            <p class="d-inline-block w-50">Tổng tiền:</p>
-                            <input class="tongtien" type="text">
-                        </div>
-                        <div>
-                            <p class="d-inline-block w-50">Khách hàng trả:</p>
-                            <input class="tienkhach" type="text">
-                        </div>
-                        <div>
-                            <p class="d-inline-block w-50">Tiền thừa:</p>
-                            <input class="tienthua" type="text" value="0">
-                        </div>
-                        <button onclick="luubill()"> In bill </button>
-                        <button onclick="resetbill()"> Reset Bill </button>
-                    </div>
+                <div>
+                    <h5 class="p-0 m-0 d-inline-block">2+2=</h5>
+                    <input class="form-login-captcha w-75" placeholder="Kết quả" type="text">
+                </div>
+                <div class="btn text-center mt-2 w-100 border-bottom-0">
+                    <button type="button" class="btn-login btn btn-outline-primary  w-75">Đăng Nhập</button>
+                    <p class="mt-1">Bạn chưa có tài khoản? <span class="hover-btn btn-resgister-back text-danger">Đăng
+                            Ký</span> </p>
                 </div>
             </div>
-        </div>
-        <div class="row p-0 m-0 mt-1">
-            <div class="col-md-12 p-0 m-0">
-                <div class="btn-danhmuc border border-primary">
-                    <div class="btn-toolbar justify-content-between" role="toolbar"
-                        aria-label="Toolbar with button groups">
-                        <div class="btn-group" role="group" aria-label="First group">
-                            <button onclick="hienthispao()" type="button" class="btn btn-secondary">Áo</button>
-                            <button onclick="hienthispquan()" type="button" class="btn btn-secondary">Quần</button>
-                            <button onclick="hienthitatca()" type="button" class="btn btn-secondary">Tất cả sản
-                                phẩm</button>
-                        </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon2"><i class="fas fa-search"></i></div>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Tìm sản phẩm">
-                        </div>
-                    </div>
+            <div class="form-register">
+                <h1 class="text-danger text-center">Đăng Ký Tài Khoản </h1>
+                <div>
+                    <i class="fas fa-home"></i>
+                    <input class="form-register-tch" placeholder="Tên cửa hàng" type="text">
+                </div>
+                <div>
+                    <i class="fas fa-user"></i>
+                    <input class="form-register-user" placeholder="Tên người dùng" type="text">
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <input class="form-register-phone" placeholder="Số điện thoại" type="number">
+                </div>
+                <div>
+                    <i class="fas fa-key"></i>
+                    <input class="form-register-pass" placeholder="Mật khẩu" type="password">
+                </div>
+                <div>
+                    <i class="fas fa-envelope-square"></i>
+                    <input class="form-register-email" placeholder="Địa chỉ Email" type="email">
+                </div>
+                <div class="btn text-center w-100 mt-2 border-bottom-0">
+                    <button type="button" class="btn-resgister btn btn-outline-danger  w-75">Đăng Ký</button>
+                    <p class="mt-1">Bạn đã có tài khoản? <span class="hover-btn btn-login-back text-primary">Đăng
+                            Nhập</span> </p>
                 </div>
             </div>
-        </div>
-        <div class="row p-0 m-0 mt-1 ">
+            <div class="note"></div>
         </div>
     </div>
-    <div class="trangadmin">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" onclick="tonghopbill()" class="btn-thongkedonhang btn btn-secondary">Thống kê đơn hàng</button>
-            <button type="button" onclick="hienthitatca()" class="btn-quanlysp btn btn-secondary">Quản lý sản phẩm</button>
-            <button type="button" class="btn btn-secondary">Quản lý khách hàng</button>
-            <button type="button" class="btn btn-secondary">Quản lý nhà cung cấp</button>
+    <div class="index">
+        <div class="user-index float-right">
+            <p class="userid d-inline-block btn btn-primary p-0 m-0"></p>
         </div>
-        <div class="thongkedonhang">
-            <div class="row p-0 m-0">
-                <div class="col-md-12 p-0 m-0">
-                    <table class="w-100">
-                        <tr>
-                            <td class="w-25">Tên khách hàng/id khách hàng</td>
-                            <td class="w-25">Mã sp đã mua</td>
-                            <td class="w-25">Thành tiền</td>
-                            <td>Thông tin</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-12 p-0 m-0">
-                    <table class="show-bill w-100">
+        <div class="thanhdieuhuong">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn-banhang btn btn-primary">Bán Hàng</button>
+                <button type="button" class="btn-trangadmin btn btn-primary">Admin</button>
+            </div>
+        </div>
 
-                    </table>
+        <div class="trangbanhang">
+            <div class="row p-0 m-0 row-eq-height">
+                <div class="col-md-8 p-0 m-0 border border-primary">
+                    <div>
+                        <table class="w-100 text-center">
+                            <tr>
+                                <th style="width: 10%;">Sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="donhang">
+                        <table class="donhang-table w-100">
+
+                        </table>
+                    </div>
                 </div>
-                <div class="httongbill">
-                    <h4 class="d-inline-block">Tổng tiền trong ngày</h4>
-                    <input class="httongbill-input" type="text">
+                <div class="col-md-4 p-0 m-0">
+                    <div class="col-md-12 p-0 m-0">
+                        <div class="form-hoadon border border-primary">
+                            <h2 class="text-center text-primary">Thông tin đơn hàng</h2>
+                            <div class="idkhachhang">
+                                <p class="d-inline-block w-50">ID khách hàng:</p>
+                                <input class="id-khach" type="text" value="Khách lẻ">
+                                <div class="timkiemkhachhang">
+
+                                </div>
+                            </div>
+                            <div>
+                                <p class="d-inline-block w-50">Thành tiền:</p>
+                                <input class="thanhtien" type="text" value="0">
+                            </div>
+                            <div>
+                                <p class="d-inline-block w-50">VAT:</p>
+                                <p class="d-inline-block"> 5%</p>
+                            </div>
+                            <div>
+                                <p class="d-inline-block w-50">Tổng tiền:</p>
+                                <input class="tongtien" type="text">
+                            </div>
+                            <div>
+                                <p class="d-inline-block w-50">Khách hàng trả:</p>
+                                <input class="tienkhach" type="text">
+                            </div>
+                            <div>
+                                <p class="d-inline-block w-50">Tiền thừa:</p>
+                                <input class="tienthua" type="text" value="0">
+                            </div>
+                            <button onclick="luubill()" class="btn btn-success"> In bill </button>
+                            <button onclick="resetbill()" class="btn btn-success"> Reset Bill </button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="row p-0 m-0 mt-1">
+                <div class="col-md-12 p-0 m-0">
+                    <div class="btn-danhmuc border border-primary">
+                        <div class="btn-toolbar justify-content-between" role="toolbar"
+                            aria-label="Toolbar with button groups">
+                            <div class="btn-group" role="group" aria-label="First group">
+                                <div class="btn-danhmucsp">
+                                    <button onclick="hienthispao()" type="button" id-btn="Áo" class="btn-danhmucmoi btn btn-primary">Áo</button>
+                                    <button onclick="hienthispquan()" type="button" id-btn="Quần" class="btn-danhmucmoi btn btn-primary">Quần</button>
+                                    <button onclick="hienthitatca()" type="button" class="btn btn-primary">Tất cả sản
+                                        phẩm</button>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="btnGroupAddon2"><i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="timsanpham form-control" placeholder="Tìm sản phẩm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0 mt-1 ">
             </div>
         </div>
-        <div class="quanlysp">
-            <div>Hello</div>
-            
-            <div class="quanlysp-tatcasp">
-                <div class="row p-0 m-0"></div> 
+        <div class="trangadmin">
+            <div class="trangadmin-dieuhuong">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" onclick="tonghopbill()" class="btn-thongkedonhang btn btn-success">Thống kê
+                        đơn
+                        hàng</button>
+                    <button type="button" onclick="hienthitatca()" class="btn-quanlysp btn btn-success">Quản lý sản
+                        phẩm</button>
+                    <button type="button" class="btn-quanlykhachhang btn btn-success">Quản lý khách hàng</button>
+                    <button type="button" class="btn-quanlyncc btn btn-success">Quản lý nhà cung cấp</button>
+                </div>
             </div>
-                       
+
+            <div class="thongkedonhang">
+                <div class="row p-0 m-0">
+                    <div class="col-md-12 p-0 m-0">
+                        <table class="w-100">
+                            <tr>
+                                <th class="w-25">Tên khách hàng/id khách hàng</th>
+                                <th class="w-25">Mã sp đã bán</th>
+                                <th class="w-25">Thành tiền</th>
+                                <th>Thông tin</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-12 p-0 m-0">
+                        <table class="show-bill w-100">
+
+                        </table>
+                    </div>
+                    <div class="httongbill">
+                        <h5 class="d-inline-block">Tổng đơn hàng trong ngày: </h5>
+                        <p class="httongdonhang-input d-inline-block mr-3" > 0 </p>
+                        <h5 class="d-inline-block">Tổng tiền trong ngày: </h5>
+                        <input class="httongbill-input" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="quanlysp">
+                <div>
+                    <div>
+                        <button class="btnht-themsp btn btn-danger">Thêm mới</button>
+                    </div>
+                    <div class="quanlysp-themsp border border-primary">
+                        <h5>Tên Sản phẩm: </h5>
+                        <input class="quanlysp-themsp-ten" type="text">
+                        <h5>Id: </h5>
+                        <input class="quanlysp-themsp-id" type="text">
+                        <h5>Danh mục: </h5>
+                        <select class="danhmuc" name="Danh mục">
+                            <option value="Áo">Áo</option>
+                            <option value="Quần">Quần</option>
+                        </select> </br>
+                        <input class="form-danhmuc" value="" type="text"> </br>
+                        <button class="themdanhmuc btn btn-light">Thêm danh mục</button>
+                        <button class="xoadanhmuc btn btn-light">Xóa danh mục</button>
+                        <h5>Giá sản phẩm: </h5>
+                        <input class="quanlysp-themsp-gia" type="text">
+                        <h5>Hình ảnh</h5>
+                        <input class="quanlysp-themsp-img" type="text">
+                        <h5>Nhà cung cấp</h5>
+                        <input class="quanlysp-themsp-nhacungcap" type="text">
+                        <p></p>
+                        <button class="tat btn btn-danger">Hủy</button>
+                        <button onclick="themsanphamvaokho()" class="btn btn-danger">Thêm mới</button>
+                    </div>
+                </div>
+                <div class="quanlysp-tatcasp">
+                    <div class="row p-0 m-0"></div>
+                </div>
+
+            </div>
+            <div class="quanlykhachhang">
+                <div>
+                    <div>
+                        <button class="btnht-themkh btn btn-danger">Thêm mới</button>
+                    </div>
+                    <div class="quanlykhachhang-themkh my-1 border border-primary">
+                        <h5>Tên Khách hàng: </h5>
+                        <input class="quanlykhachhang-themkh-ten" type="text">
+                        <h5>Id khách hàng: </h5>
+                        <input class="quanlykhachhang-themkh-id" type="text">
+                        <h5>Địa chỉ khách hàng: </h5>
+                        <input class="quanlykhachhang-themkh-dc" type="text">
+                        <h5>Số điện thoại khách hàng: </h5>
+                        <input class="quanlykhachhang-themkh-sdt" type="text">
+                        <p></p>
+                        <button onclick="themkhachhangmoi()" class="btn btn-danger">Thêm mới</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <table class="w-100">
+                            <tr class="w-100">
+                                <th class="w-25">Tên Khách hàng</th>
+                                <th class="w-25">Id khách hàng</th>
+                                <th class="w-25">Địa chỉ khách hàng</th>
+                                <th class="w-25">Số điện thoại khách hàng</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="showkhachhang w-100">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="quanlynhacungcap">
+                <div>
+                    <div>
+                        <button class="btnht-themncc btn btn-danger">Thêm mới</button>
+                    </div>
+                    <div class="quanlynhacungcap-themncc my-1 border border-primary">
+                        <h5>Tên nhà cung cấp: </h5>
+                        <input class="quanlynhacungcap-themncc-ten" type="text">
+                        <h5>Id nhà cung cấp: </h5>
+                        <input class="quanlynhacungcap-themncc-id" type="text">
+                        <h5>Địa chỉ nhà cung cấp: </h5>
+                        <input class="quanlynhacungcap-themncc-dc" type="text">
+                        <h5>Số điện thoại nhà cung cấp: </h5>
+                        <input class="quanlynhacungcap-themncc-sdt" type="text">
+                        <p></p>
+                        <button onclick="themnccgmoi()" class="btn btn-danger">Thêm mới</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <table class="w-100">
+                            <tr class="w-100">
+                                <th class="w-25">Tên Nhà Cung Cấp</th>
+                                <th class="w-25">Id Nhà Cung Cấp</th>
+                                <th class="w-25">Địa chỉ Nhà Cung Cấp</th>
+                                <th class="w-25">Số điện thoại Nhà Cung Cấp</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="shownhacc w-100">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="htchitietbill">
-
+    </div>
+    <div class="chinhsualaisanpham">
+        <h5>Tên Sản phẩm: </h5>
+        <input class="chinhsualaisanpham-ten" type="text">
+        <h5>Id: </h5>
+        <input class="chinhsualaisanpham-id" type="text">
+        <h5>Danh mục: </h5>
+        <select class="danhmuc" name="Danh mục">
+            <option value="Áo">Áo</option>
+            <option value="Quần">Quần</option>
+        </select>
+        <h5>Giá sản phẩm: </h5>
+        <input class="chinhsualaisanpham-gia" type="text">
+        <h5>Hình ảnh</h5>
+        <input class="chinhsualaisanpham-img" type="text">
+        <button class="cancel btn btn-danger">Hủy</button>
+        <button class="btn-update btn btn-success">Cập nhật</button>
+    </div>
+    <div class="chinhsuathongtinkhachhang">
+        <h5>Tên khách hàng: </h5>
+        <input class="chinhsuathongtinkhachhang-ten" type="text">
+        <h5>Id khách hàng: </h5>
+        <input class="chinhsuathongtinkhachhang-id" type="text">
+        <h5>Địa chỉ khách hàng: </h5>
+        <input class="chinhsuathongtinkhachhang-diachi" type="text">
+        <h5>Số điện thoại khách hàng</h5>
+        <input class="chinhsuathongtinkhachhang-sdt" type="text">
+        <button class="cancel btn btn-danger">Hủy</button>
+        <button class="btn-updatekh btn btn-success">Cập nhật</button>
+    </div>
+    <div class="chinhsuathongtinncc">
+        <h5>Tên khách hàng: </h5>
+        <input class="chinhsuathongtinncc-ten" type="text">
+        <h5>Id khách hàng: </h5>
+        <input class="chinhsuathongtinncc-id" type="text">
+        <h5>Địa chỉ khách hàng: </h5>
+        <input class="chinhsuathongtinncc-diachi" type="text">
+        <h5>Số điện thoại khách hàng</h5>
+        <input class="chinhsuathongtinncc-sdt" type="text">
+        <button class="cancel btn btn-danger">Hủy</button>
+        <button class="btn-updatencc btn btn-success">Cập nhật</button>
+    </div>
     </div>
 
 </body>

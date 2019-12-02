@@ -1,12 +1,12 @@
-body {
-  background-image: url(img/shoptel-grand-world-phu-quoc-vinpearl-shophouse-2.jpg);
+
+.body-form{
+  background-image: url(img/nen.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-
 .form {
   width: 400px;
   background: rgba(255, 255, 255, 0.7);
@@ -14,7 +14,7 @@ body {
   padding: 10px;
   position: absolute;
   top: 50%;
-  right: 10%;
+  left: 10%;
   transform: translate(0, -50%);
 }
 .form .form-login {
@@ -44,5 +44,162 @@ body {
 .hover-btn:hover {
   font-weight: bold;
 }
+/* css bán hàng */
+.index {
+  display: none;
+  position: relative;
+}
 
-/*# sourceMappingURL=style.css.map */
+.htchitietbill {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+}
+
+.htchitietbill p {
+  display: inline-block;
+  width: 50%;
+}
+
+.htchitietbill h6 {
+  display: inline-block;
+  width: 50%;
+}
+
+.httongbill {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.httongbill .httongbill-input {
+  border: none;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.quanlysp {
+  display: none;
+}
+
+.chinhsualaisanpham {
+  display: none;
+  position: absolute;
+  left: 60%;
+  top: 10%;
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+}
+
+.quanlysp-themsp {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.quanlykhachhang-themkh {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.quanlynhacungcap-themncc {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.idkhachhang {
+  position: relative;
+}
+
+.timkiemkhachhang {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  width: 50%;
+  background: rgb(114, 241, 250);
+  display: none;
+  padding: 10px;
+}
+
+.thanhdieuhuong {
+  background: #007bff;
+}
+
+.btn-danhmuc {
+  background: #007bff;
+}
+
+.trangadmin-dieuhuong {
+  background: #28a745;
+
+}
+
+.chinhsuathongtinkhachhang {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.chinhsuathongtinncc {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
+  background: rgb(192, 190, 190);
+  color: rgb(0, 0, 0);
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.user-index {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.user-index:hover p {
+  color: red;
+}
